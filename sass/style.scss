@@ -4,9 +4,42 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "socico";
+@import "soc/*.png";
 
-$color:red;
+.social__item{
+	display:block;
+}
 
-h1{
-	color:$color;
+.social__link{
+	display:block;
+	width:15px;
+	height:15px;	
+}
+
+$bgcolor1:#ffffff;
+$bgcolor2:#f4f4f4;
+$mainwidth:1100px;
+
+
+html{ height: 100%; }
+
+.top-block{
+	background:$bgcolor1;
+	height:77px;
+}
+
+.bottom-block{
+	background:$bgcolor2;
+	height:96px;
+}
+
+.inln{
+	 display: inline-block;
+	 vertical-align: bottom;
+}
+
+.bottom-block__wrap{
+	width:$mainwidth;
+	margin: 0 auto;
 }

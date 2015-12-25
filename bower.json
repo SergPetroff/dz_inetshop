@@ -1,0 +1,6 @@
+{
+  "name": "dz_inetshop",
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}

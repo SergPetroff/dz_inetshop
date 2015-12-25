@@ -13,50 +13,28 @@
     <header>
       <div class="header-wrapper">
         <div class="top-block">
-          <ul class="top-block_social">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
-          <div class="top-block_adres"></div>
-          <div class="top-block_phone"></div>
+          <div class="top-block__wrap">
+            <ul class="top-block__social">
+              <li class="social__item"><a href="#" class="social__link"></a></li>
+              <li class="social__item"><a href="#" class="social__link"></a></li>
+              <li class="social__item"><a href="#" class="social__link"></a></li>
+            </ul>
+            <div class="top-block_adres"></div>
+            <div class="top-block_phone"></div>
+          </div>
         </div>
         <div class="bottom-block">
-          <div class="logo"><img alt="Логотип" class="logo-img"></div>
-          <div class="search">
-            <input class="search-inpt">
-          </div><a href="#" class="maps"></a><a href="#" class="history-order"></a><a href="#" class="basket"></a>
+          <div class="bottom-block__wrap">
+            <div class="logo inln"><img src="app/img/cooltech.png" alt="Логотип" class="logo-img"></div>
+            <div class="search inln">
+              <input class="search-inpt">
+            </div>
+            <div class="nav-site inln"><a href="#" class="maps">Карта проезда</a><a href="#" class="history-order">История заказов</a><a href="#" class="basket">Корзина</a></div>
+          </div>
         </div>
       </div>
     </header>
-    <div class="main-content">
-      <ul class="nav-list">
-        <li class="nav-list_item"><a href="#">Планшеты</a></li>
-        <li class="nav-list_item"><a href="#">Мобильные телефоны</a></li>
-        <li class="nav-list_item"><a href="#">Mp3 плееры</a></li>
-        <li class="nav-list_item"><a href="#">Персоональные комптютеры</a></li>
-        <li class="nav-list_item"><a href="#">Ноутбуки</a></li>
-        <li class="nav-list_item"><a href="#">Аксессуары</a></li>
-        <li class="nav-list_item"><a href="#">Бытовая техника</a></li>
-      </ul>
-      <div class="Breadcrumb"></div>
-      <h1 class="body_title">Мобильные телефоны</h1>
-      <ul class="sidebar">
-        <li class="sidebar-item"><a href="#">Наличие в магазинах</a></li>
-        <li class="sidebar-item"><a href="#">Бренды</a></li>
-        <li class="sidebar-item"><a href="#">Цена</a></li>
-        <li class="sidebar-item"><a href="#">Цвет</a></li>
-        <li class="sidebar-item"><a href="#">Операционные системы</a></li>
-      </ul>
-      <div class="body_content">
-        <header class="content-nav-bar"></header>
-        <div class="main-content"></div>
-      </div>
-      <div class="important-info">
-        <h1 class="important-info_title">Важная информация</h1>
-        <div class="important-info_content"></div>
-      </div>
-    </div>
+    <!--include jade/content-->
     <footer>
       <div class="footer-wrapper">
         <div class="footer_logo"><img alt="Логотип" class="footer_logo_img"></div>

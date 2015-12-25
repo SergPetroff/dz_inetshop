@@ -1,20 +1,23 @@
 header
 	.header-wrapper
-		div.top-block
-			ul.top-block_social
-				li: a(href="#")
-				li: a(href="#")
-				li: a(href="#")
-			div.top-block_adres
-			div.top-block_phone
-		div.bottom-block
-			div.logo
-				img.logo-img(alt="Логотип")
-			.search
-				input.search-inpt
-			a.maps(href="#")
-			a.history-order(href="#")
-			a.basket(href="#")
+		.top-block
+			.top-block__wrap
+				ul.top-block__social
+					li.social__item: a.social__link(href="#")
+					li.social__item: a.social__link(href="#")
+					li.social__item: a.social__link(href="#")
+				.top-block_adres
+				.top-block_phone
+		.bottom-block
+			.bottom-block__wrap
+				.logo.inln
+					img.logo-img(src="app/img/cooltech.png",alt="Логотип")
+				.search.inln
+					input.search-inpt
+				.nav-site.inln
+					a.maps(href="#") Карта проезда
+					a.history-order(href="#") История заказов
+					a.basket(href="#") Корзина
 
 
 

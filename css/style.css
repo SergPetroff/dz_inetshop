@@ -67,7 +67,61 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 1, ../sass/socico.scss */
+.social__item {
+  display: block;
+}
+
+/* line 5, ../sass/socico.scss */
+.social__link {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+/* line 88, soc/*.png */
+.soc-sprite {
+  background-image: url('/app/img/soc-s5b977f59b2.png');
+  background-repeat: no-repeat;
+}
+
 /* line 10, ../sass/style.scss */
-h1 {
-  color: red;
+.social__item {
+  display: block;
+}
+
+/* line 14, ../sass/style.scss */
+.social__link {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+/* line 25, ../sass/style.scss */
+html {
+  height: 100%;
+}
+
+/* line 27, ../sass/style.scss */
+.top-block {
+  background: #ffffff;
+  height: 77px;
+}
+
+/* line 32, ../sass/style.scss */
+.bottom-block {
+  background: #f4f4f4;
+  height: 96px;
+}
+
+/* line 37, ../sass/style.scss */
+.inln {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* line 42, ../sass/style.scss */
+.bottom-block__wrap {
+  width: 1100px;
+  margin: 0 auto;
 }
