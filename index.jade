@@ -1,9 +1,9 @@
 -var itemNav = ["Планшеты","Мобильные телефоны","Mp3 плееры","Персоональные комптютеры","Ноутбуки","Аксессуары","Бытовая техника"]
 
 mixin topnavigation(items)
-	ul.nav-list
+	ul.main-navlist
 		each item in items
-			li.nav-list_item: a(href="#") #{item}
+			li.nav-list__item: a.nav-list__item__link(href="#") #{item}
 mixin footernavigation(items)
 	each item in items
 		a(href="#") #{item}
@@ -19,7 +19,8 @@ html
 		//Корректное масштабирование на разных устройствах 
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" type="text/css" href="css/style.css")
+
 	body
 		include jade/header
-		//include jade/content
+		include jade/content
 		include jade/footer

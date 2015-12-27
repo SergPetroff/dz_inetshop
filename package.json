@@ -2,6 +2,10 @@
   "name": "mygulp",
   "version": "0.1.0",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.1.1"
   }
 }

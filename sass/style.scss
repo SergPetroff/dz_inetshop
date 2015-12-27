@@ -4,42 +4,167 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-@import "socico";
+@import "include/navmenu.scss";
+$soc-spacing: 5px;
 @import "soc/*.png";
+@include all-soc-sprites;
 
-.social__item{
-	display:block;
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
-
-.social__link{
-	display:block;
-	width:15px;
-	height:15px;	
-}
-
+/*Переменные*/
 $bgcolor1:#ffffff;
 $bgcolor2:#f4f4f4;
 $mainwidth:1100px;
+$clrOrang:#ff6602;
 
 
+
+
+/*Функциональные стили*/
+
+.inlnblck{
+	display:inline-block;
+}
+
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.clearfix:before, .clearfix:after{
+	content: " ";
+	display: table;
+}
+
+.clearfix:after{
+	clear: both;
+}
+
+a{
+	text-decoration:none;
+}
+
+
+/*Функциональные стили конец*/
 html{ height: 100%; }
+body{background:$bgcolor2}
+
 
 .top-block{
 	background:$bgcolor1;
 	height:77px;
 }
 
+.social__item{
+	margin-left:17px;
+	display:inline-block;
+}
+.social__item:first-child{
+	margin-left:0
+}
+
+.social__link{
+	display:block;
+	width:27px;
+	height:27px;	
+}
+
+
 .bottom-block{
 	background:$bgcolor2;
 	height:96px;
 }
-
-.inln{
-	 display: inline-block;
-	 vertical-align: bottom;
+.top-block__wrap{
+	width:$mainwidth;
+	margin: 0 auto;
+	@include vertical-align();
 }
+
+
 
 .bottom-block__wrap{
 	width:$mainwidth;
 	margin: 0 auto;
+	@include vertical-align();
+}
+
+
+.contacts__adres:before{
+  display: inline-block;
+  content: url('../app/img/mappin.png');
+  width: 15px;
+  height: 15px;
+  margin-right:5px;
+}
+.contacts__phone{
+	margin-left:80px;
+}
+.contacts__phone:before{
+  display: inline-block;
+  content: url('../app/img/telephone.png');
+  width: 15px;
+  height: 15px;
+  margin-right:5px;
+}
+
+.logo{
+	overflow:hidden;
+	width:238px;
+	height:36px;
+}
+
+.logo-img{
+	width:100%;
+}
+
+.search{
+	vertical-align:top;
+	height:34px;
+}
+
+.search__inpt{
+	width:290px;
+	height:inherit;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border: solid 1px #dee1e4;
+	border-right: none;
+	padding:10px;
+}
+
+.search__btn{
+	width:80px;
+	height:inherit;
+	background:$clrOrang;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border: none;
+	color:white;
+}
+
+.nav-site a{
+	padding-top: 8px;
+	display:inline-block;
+	vertical-align:middle;
+	color:#333333;
+	margin-left:33px;
+}
+
+/*Основной блок*/
+.main-nav-wrapper{
+	background:$bgcolor1;
+}
+.main-content{
+	width: 1100px;
+	margin:0 auto;
 }
