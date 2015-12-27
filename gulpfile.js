@@ -11,7 +11,6 @@ gulp.task('jade', function() { // задача на jade
         }))  // Собираем Jade только в папке ./assets/template/ исключая файлы с _*
         .on('error', console.log) // Если есть ошибки, выводим и продолжаем
     .pipe(gulp.dest('.')) // Записываем собранные файлы
-    //.pipe(livereload(server)); // даем команду на перезагрузку страницы
 }); 
 gulp.task('compass', function() {
   gulp.src('./sass/*.scss')

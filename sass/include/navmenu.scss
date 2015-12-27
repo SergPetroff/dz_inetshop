@@ -1,0 +1,27 @@
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.main-navlist{
+		width: 1100px;
+	margin:0 auto;
+}
+.nav-list__item{
+	display:inline-block;
+	height:52px;
+	background:#ffffff;
+}
+.nav-list__item:hover{
+	background:#e4e2e2;
+}
+
+.nav-list__item__link{
+
+	display:block;
+	color:black;
+	@include vertical-align();
+	padding:0 23px;
+}
