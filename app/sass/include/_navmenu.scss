@@ -5,6 +5,7 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
 .main-navlist{
 	width: 1100px;
 	margin:0 auto;
@@ -49,12 +50,28 @@
 
 /*хлебные крошки*/
 
-
+.Breadcrumb{
+	margin-bottom:30px;
+}
 .crumb__item{
 	display: inline-block;
+	 padding-right: 5px;
 }
 
 .crumb__item:after{
 	content:">";
 	display: inline-block;	
+	vertical-align: middle;
+}
+.crumb__item:last-child:after{
+	content:"";
+}
+
+.crumb__link{
+	padding-right:5px;
+	color:black;
+}
+
+.crumb__link.active{
+		color:#ff6602;
 }

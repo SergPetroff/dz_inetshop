@@ -1,17 +1,50 @@
 -var itemSide = ["Наличие в магазинах","Бренды","Цена","Цвет","Операционные системы"]
+
+-var itemNav = ["Планшеты","Мобильные телефоны","Mp3 плееры","Персоональные комптютеры","Ноутбуки","Аксессуары","Бытовая техника"]
+
+
+mixin topnavigation(items)
+	ul.main-navlist
+		each item in items
+			if	(item == "Мобильные телефоны" )
+				li.nav-list__item.action: a.nav-list__item__link(href="#") #{item}
+			else
+				li.nav-list__item: a.nav-list__item__link(href="#") #{item}
+
 .main-nav-wrapper
 	+ topnavigation(itemNav)
 .main-content
+	.Breadcrumb
+		.crumb__item.level1
+			a.crumb__link(href="#") Главная
+		.crumb__item.level2
+			a.crumb__link.active(href="#") Каталог
+	h1.content__title Мобильные телефоны
 	.main-content__wrap
-		.Breadcrumb
-			.crumb__item.level1
-				a.crumb__link(href="#") Главная
-			.crumb__item.level2
-				a.crumb__link(href="#") Каталог
-		h1.body_title хуй
-		ul.sidebar
-			each item in itemSide
-				li.sidebar-item: a(href="#") #{item}
+		.wrap-aside
+			.aside-typegoods
+				.typegoods__item
+					a.typegoods__link(href="#")Флагманы
+				.typegoods__item
+					a.typegoods__link.lnk-active(href="#")Бюджетная линейка
+			ul.asidebar-list
+				li.sidebar-item.exist-goods
+					h3.sidebar__item__titile 
+						a.sidebar__title__link(href="#")Наличие в магазинах
+					.sidebar-item__content
+						ul.exist__list
+							li.exist__item
+								input.exist__item__input(type="radio" name="exist" value="all" id="all")							
+								label.exist__item__label(for="all") 
+									.exist__custom-input
+									.exist__custom-text Во всех магазинах
+							li.exist__item
+								input.exist__item__input(type="radio"
+								name="exist" value="near" id="near")
+								label.exist__item__label(for="near")
+									.exist__custom-input
+									.exist__custom-text В ближайшем ко мне магазине
+
 		.body_content
 			header.content-nav-bar
 			.main-content

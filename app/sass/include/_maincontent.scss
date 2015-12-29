@@ -1,0 +1,122 @@
+/*хлебные крошки*/
+
+.Breadcrumb{
+	margin-bottom:30px;
+}
+.crumb__item{
+	display: inline-block;
+	 padding-right: 5px;
+}
+
+.crumb__item:after{
+	content:">";
+	display: inline-block;	
+	vertical-align: middle;
+}
+.crumb__item:last-child:after{
+	content:"";
+}
+
+.crumb__link{
+	padding-right:5px;
+	color:black;
+}
+
+.crumb__link.active{
+		color:#ff6602;
+}
+
+.content__title{
+	font-size: 20px;
+	margin-bottom:34px;
+}
+
+/*aside*/
+.wrap-aside{
+	max-width:333px;
+
+}
+.aside-typegoods{
+	border:solid 1px #dee1e4;
+	border-radius: 4px;
+	margin-bottom:40px;
+}
+
+.typegoods__item{
+	background:#fbfbfb;
+	
+}
+
+.typegoods__link{
+	padding: 15px 30px;
+    color: #7f7f7f;
+    display: block;
+    border:solid 1px #dee1e4;
+}
+
+.lnk-active{
+	background: #d9e5ea;
+}
+
+
+.asidebar-list{
+	border:solid 1px #dee1e4;	
+	border-radius: 4px;
+}
+
+.sidebar-item{
+	background:#fbfbfb;
+}
+
+.sidebar__item__titile{
+	padding: 15px 0 15px 30px;
+}
+.sidebar__title__link{
+	color:black;
+	font-size:20px;
+}
+.sidebar__title__link:after{
+	content:url(../img/btn-accardeon.png);
+	float:right;
+	padding-right:9px;
+
+}
+
+.sidebar-item__content{
+	padding-left:30px;
+}
+
+.exist__item__input{
+	/*display:none;*/
+}
+.exist__item__label{
+	
+
+}
+.exist__custom-input{
+	display: inline-block;
+	width: 16px;
+    height: 16px;
+ 	border-radius: 14px;
+ 	border: 3px solid #dee1e4;
+    margin-right: 10px; 
+}
+
+.exist__custom-text{
+	display: inline-block;
+}
+
+/*.exist__item__label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+ 	border-radius: 14px;
+ 	border: 3px solid #dee1e4;
+    margin-right: 10px;  
+}*/
+
+
+.exist__item__input:checked + div.exist__custom-input{
+    backgroud:#ff6602;
+}

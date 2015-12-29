@@ -1,12 +1,6 @@
 -var itemNav = ["Планшеты","Мобильные телефоны","Mp3 плееры","Персоональные комптютеры","Ноутбуки","Аксессуары","Бытовая техника"]
 
-mixin topnavigation(items)
-	ul.main-navlist
-		each item in items
-			if	(item == "Мобильные телефоны" )
-				li.nav-list__item.action: a.nav-list__item__link(href="#") #{item}
-			else
-				li.nav-list__item: a.nav-list__item__link(href="#") #{item}
+
 mixin footernavigation(items)
 	each item in items
 		a(href="#") #{item}
