@@ -35,7 +35,7 @@ gulp.task('server',function (){
 
 gulp.task('watch', function() {
 	gulp.watch('sass/*.scss', ['compass']);
-	gulp.watch('./*.jade', ['compass']);
+	gulp.watch('./*.jade', ['jade']);
 	gulp.watch([
 		'index.html',
 		'css/*.css'
