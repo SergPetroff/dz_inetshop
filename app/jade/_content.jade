@@ -1,8 +1,13 @@
 -var itemSide = ["Наличие в магазинах","Бренды","Цена","Цвет","Операционные системы"]
 .main-nav-wrapper
 	+ topnavigation(itemNav)
-	.main-content
+.main-content
+	.main-content__wrap
 		.Breadcrumb
+			.crumb__lev2
+				a.crumb__link(href="#") Главная
+			.crumb__lev2
+				a.crumb__link(href="#") Каталог
 		h1.body_title Мобильные телефоны
 		ul.sidebar
 			each item in itemSide

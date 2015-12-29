@@ -13,7 +13,7 @@ gulp.task('jade', function() { // задача на jade
     .pipe(gulp.dest('.')) // Записываем собранные файлы
 }); 
 gulp.task('compass', function() {
-  gulp.src('./sass/*.scss')
+  gulp.src('app/sass/*.scss')
     .pipe(compass({
       config_file: './config.rb',
       css: 'css',
@@ -34,8 +34,8 @@ gulp.task('server',function (){
 
 
 gulp.task('watch', function() {
-	gulp.watch('sass/*.scss', ['compass']);
-	gulp.watch('./*.jade', ['jade']);
+	gulp.watch('app/sass/*.scss', ['compass']);
+	gulp.watch('app/jade/*.jade', ['jade']);
 	gulp.watch([
 		'index.html',
 		'css/*.css'
