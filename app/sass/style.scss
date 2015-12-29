@@ -4,7 +4,8 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-@import "include/navmenu.scss";
+@import "include/_navmenu.scss";
+@import "include/_maincontent.scss";
 $soc-spacing: 5px;
 @import "soc/*.png";
 @include all-soc-sprites;
@@ -18,7 +19,7 @@ $soc-spacing: 5px;
     transform: translateY(-50%);
 }
 /*Переменные*/
-$bgcolor1:#ff55ff;
+$bgcolor1:#ffffff;
 $bgcolor2:#f4f4f4;
 $mainwidth:1100px;
 $clrOrang:#ff6602;

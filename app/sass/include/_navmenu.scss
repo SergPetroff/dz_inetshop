@@ -6,13 +6,18 @@
     transform: translateY(-50%);
 }
 .main-navlist{
-		width: 1100px;
+	width: 1100px;
 	margin:0 auto;
+	font-size:0;
 }
 .nav-list__item{
 	display:inline-block;
 	height:52px;
 	background:#ffffff;
+}
+
+.nav-list__item a{
+	font-size:15px;
 }
 
 .nav-list__item.action{
@@ -21,7 +26,8 @@
 }
 
 .nav-list__item.action a{
-color:white;
+	color:white;
+	font-size:15px;
 }
 
 .nav-list__item.action:hover{
@@ -38,5 +44,17 @@ color:white;
 	display:block;
 	color:black;
 	@include vertical-align();
-	padding:0 23px;
+	padding:0 25px;
+}
+
+/*хлебные крошки*/
+
+
+.crumb__item{
+	display: inline-block;
+}
+
+.crumb__item:after{
+	content:">";
+	display: inline-block;	
 }

@@ -8,16 +8,16 @@ gulp.task('jade', function() { // задача на jade
    return gulp.src('index.jade')
         .pipe(jade({
             pretty: true
-        }))  // Собираем Jade только в папке ./assets/template/ исключая файлы с _*
+        }))  
         .on('error', console.log) // Если есть ошибки, выводим и продолжаем
-    .pipe(gulp.dest('.')) // Записываем собранные файлы
+    .pipe(gulp.dest('./')) // Записываем собранные файлы
 }); 
 gulp.task('compass', function() {
-  gulp.src('app/sass/*.scss')
+  gulp.src('app/sass/**/*.scss') 
     .pipe(compass({
       config_file: './config.rb',
-      css: 'css',
-      sass: 'sass'
+      css: 'app/css',
+      sass: 'app/sass'
     }))
     .pipe(gulp.dest('./'));
 });
@@ -34,11 +34,11 @@ gulp.task('server',function (){
 
 
 gulp.task('watch', function() {
-	gulp.watch('app/sass/*.scss', ['compass']);
+	gulp.watch('app/sass/**/*.scss', ['compass']);
 	gulp.watch('app/jade/*.jade', ['jade']);
 	gulp.watch([
 		'index.html',
-		'css/*.css'
+		'app/css/*.css'
 	]).on('change', browserSync.reload);
 });
 gulp.task('default', ['server','watch']);
