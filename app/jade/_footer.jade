@@ -1,3 +1,9 @@
+-var itemNav = ["Планшеты","Мобильные телефоны","Mp3 плееры","Персоональные комптютеры","Ноутбуки","Аксессуары","Бытовая техника"]
+
+mixin footernavigation(items)
+	each item in items
+		a(href="#") #{item}
+		
 footer
 	.footer-wrapper
 		.footer_logo

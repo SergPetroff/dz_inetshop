@@ -4,11 +4,20 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+/*@import "../bower/normalize-scss/sass/_normalize.scss";*/
 @import "include/_navmenu.scss";
 @import "include/_maincontent.scss";
+@import "include/_aside.scss";
 $soc-spacing: 5px;
+
 @import "soc/*.png";
 @include all-soc-sprites;
+
+
+$aside-spacing: 5px;
+@import "aside/*.png";
+@include all-aside-sprites;
 
 
 @mixin vertical-align {
@@ -54,9 +63,14 @@ $clrOrang:#ff6602;
 a{
 	text-decoration:none;
 }
+ul{
+	list-style: none;
+}
 
 
 /*Функциональные стили конец*/
+
+
 html{ height: 100%; }
 body{background:$bgcolor2}
 
@@ -102,7 +116,7 @@ body{background:$bgcolor2}
 
 .contacts__adres:before{
   display: inline-block;
-  content: url('../app/img/mappin.png');
+  content: url('../img/mappin.png');
   width: 15px;
   height: 15px;
   margin-right:5px;
@@ -112,7 +126,7 @@ body{background:$bgcolor2}
 }
 .contacts__phone:before{
   display: inline-block;
-  content: url('../app/img/telephone.png');
+  content: url('../img/telephone.png');
   width: 15px;
   height: 15px;
   margin-right:5px;
