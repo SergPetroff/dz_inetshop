@@ -72,15 +72,15 @@
               <div class="sidebar-item__content">
                 <ul class="exist__list">
                   <li class="exist__item">
-                    <input type="radio" name="exist" value="all" id="all" class="exist__item__input">
                     <label for="all" class="exist__item__label"> 
-                      <div class="exist__custom-btn-active"></div>
+                      <input type="radio" name="exist" value="all" id="all" class="exist__item__input">
+                      <div class="exist__custom-btn"></div>
                       <div class="exist__custom-lbl">Во всех магазинах									</div>
                     </label>
                   </li>
                   <li class="exist__item">
-                    <input type="radio" name="exist" value="near" id="near" class="exist__item__input">
                     <label for="near" class="exist__item__label"> 
+                      <input type="radio" name="exist" value="near" id="near" class="exist__item__input">
                       <div class="exist__custom-btn"></div>
                       <div class="exist__custom-lbl">В ближайшем ко мне магазине</div>
                     </label>
@@ -140,6 +140,7 @@
                   <label for="priceto" class="price__lbl-to">до</label>
                   <input type="text" id="priceto" class="price__inpt-to">
                 </div>
+                <div data-min="0" data-max="30000" class="sidebar__slider"></div>
               </div>
             </li>
             <li class="sidebar-item">
@@ -234,7 +235,7 @@
             </div>
           </div>
           <div class="products">
-            <ul class="products__list">
+            <ul id="products__list" class="products__list">
               <li class="products__item">
                 <div class="products__item-inner clearfix">
                   <div class="products__item-left left">
@@ -252,9 +253,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -262,7 +263,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -270,11 +271,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -294,9 +299,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -318,9 +323,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -328,7 +333,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -336,11 +341,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -360,9 +369,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -384,9 +393,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -394,7 +403,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -402,11 +411,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -426,9 +439,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -450,9 +463,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -460,7 +473,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -468,11 +481,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -492,9 +509,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -516,9 +533,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -526,7 +543,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -534,11 +551,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -558,9 +579,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -582,9 +603,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -592,7 +613,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -600,11 +621,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -624,9 +649,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -648,9 +673,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -658,7 +683,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -666,11 +691,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -690,9 +719,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -714,9 +743,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -724,7 +753,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -732,11 +761,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -756,9 +789,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -780,9 +813,9 @@
                       </div>
                     </div>
                     <div class="products__desc">
-                      <div class="products__desc-title">SAMSUNG</div>
+                      <div class="products__desc-title">Смартфон SAMSUNG GT-I9301i Galaxy s3</div>
                       <ul class="products__desc-options">
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Тип сим карты</div>
                           <div class="products__desc-item-param">Микро сим</div>
                         </li>
@@ -790,7 +823,7 @@
                           <div class="products__desc-item-title">Количество сим карт</div>
                           <div class="products__desc-item-param">1</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Цвет</div>
                           <div class="products__desc-item-param">Белый</div>
                         </li>
@@ -798,11 +831,15 @@
                           <div class="products__desc-item-title">ОС</div>
                           <div class="products__desc-item-param">Андроид</div>
                         </li>
-                        <li class="products__desc-item">
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">Связь 3G</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
                         <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 4G LTE</div>
+                          <div class="products__desc-item-param">нет</div>
+                        </li>
+                        <li class="products__desc-item colored">
                           <div class="products__desc-item-title">GPS модуль</div>
                           <div class="products__desc-item-param">Есть</div>
                         </li>
@@ -822,9 +859,9 @@
                   <div class="products__right right">
                     <div class="products__info">
                       <div class="products__price">11290<i class="rub"></i></div>
-                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
-                        <div class="products__availability">В наличии</div>
-                      </div>
+                    </div>
+                    <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                      <div class="products__availability">В наличии</div>
                     </div>
                   </div>
                 </div>
@@ -857,5 +894,40 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="footer-top">
+        <div class="container clearfix">
+          <div class="footer__left left"><a class="footer_logo"><img src="app/img/logo-footer.png" alt="Логотип" class="footer_logo_img">
+              <div class="footer_logo-text">cooltech</div></a></div>
+          <div class="footer__right right">
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a href="#" class="footer__social-link social-fb"></a></li>
+              <li class="footer__social-item"><a href="#" class="footer__social-link social-vk"></a></li>
+              <li class="footer__social-item"><a href="#" class="footer__social-link social-tw"></a></li>
+            </ul>
+            <div class="footer-navi">
+              <ul class="footer__navilist">
+                <li class="footer-navi__item"><a href="#" class="footer-navi__link">Планшеты</a></li>
+                <li class="footer-navi__item"><a href="#" class="footer-navi__link">Мобильные телефоны</a></li>
+                <li class="footer-navi__item"><a href="#" class="footer-navi__link">Mp3 плееры</a></li>
+                <li class="footer-navi__item"><a href="#" class="footer-navi__link">Персоональные комптютеры</a></li>
+                <li class="footer-navi__item"><a href="#" class="footer-navi__link">Ноутбуки</a></li>
+                <li class="footer-navi__item"><a href="#" class="footer-navi__link">Аксессуары</a></li>
+                <li class="footer-navi__item"><a href="#" class="footer-navi__link">Бытовая техника</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer__copyright">All right reserved. 2016. No copy alowed.</div>
+        </div>
+      </div>
+    </footer>
+    <script src="app/bower/jquery/dist/jquery.js"></script>
+    <script src="app/js/jquery-ui.min.js"></script>
+    <script src="app/js/select2.min.js"></script>
+    <script src="app/js/main.js"></script>
   </body>
 </html>

@@ -64,7 +64,17 @@
 
 @import "compass/reset";
 
-/* @import "../bower/normalize-scss/_normalize.scss"; */
+
+/*-----------plagins----------*/
+@import "plagins/jquery-ui.min.scss";
+@import "plagins/select2.scss";
+
+/*-----------widgets-------------*/
+
+@import "widgets/slider.scss";
+
+
+/*----------sections-------------*/
 @import "include/_fonts.scss";
 @import "include/_navmenu.scss";
 @import "include/_maincontent.scss";

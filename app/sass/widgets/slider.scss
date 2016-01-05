@@ -1,0 +1,23 @@
+.ui-slider{
+    height: 3px;
+    background-color: #dee1e4;
+    position: relative;
+    margin-bottom: 18px;
+    width: 280px;
+
+    .ui-slider-range {
+    height: 3px;
+    background-color: #ff6705;
+    position: absolute;
+	}
+	.ui-slider-handle {
+		background:url(../img/aside/slider-control.png) no-repeat;
+		height: 14px;
+    	width: 8px;
+    	border:0 none;
+    	cursor: pointer;
+    	margin-left: -4px;
+    	margin-top: 4px;
+	}
+}
+

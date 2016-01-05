@@ -11,13 +11,13 @@
 			.sidebar-item__content
 				ul.exist__list
 					li.exist__item
-						input.exist__item__input(type="radio" name="exist" value="all" id="all") 						
 						label.exist__item__label(for="all") 
-							.exist__custom-btn-active
+							input.exist__item__input(type="radio" name="exist" value="all" id="all") 
+							.exist__custom-btn
 							.exist__custom-lbl Во всех магазинах									
 					li.exist__item
-						input.exist__item__input(type="radio" name="exist" value="near" id="near")
 						label.exist__item__label(for="near") 
+							input.exist__item__input(type="radio" name="exist" value="near" id="near")
 							.exist__custom-btn
 							.exist__custom-lbl В ближайшем ко мне магазине
 		li.sidebar-item.brands
@@ -44,6 +44,7 @@
 						input.price__inpt-from(type="text" id="pricefrom")
 						label.price__lbl-to(for="priceto") до
 						input.price__inpt-to(type="text" id="priceto")
+					div(class="sidebar__slider" data-min="0" data-max="30000")
 		li.sidebar-item
 			h3.sidebar__item__title 
 				a.sidebar__title__link(href="#") Цвет
