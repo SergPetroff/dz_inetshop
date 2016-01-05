@@ -1,0 +1,50 @@
+.pagination{
+	text-align: right;
+}
+
+.pagination__list{
+	@include inlineblock();
+}
+
+.pagination__item{
+	@include inlineblock();
+	width:26px;
+	height:26px;
+	border-radius:3px;
+	border: 1px solid #b2b2b2;
+	position: relative;
+	overflow:hidden;
+}
+
+.pagination__link{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	display:block;
+	background:#fff;
+	&:hover{
+		background:#e0e0e0;
+	}
+}
+
+.pagination__mark{
+	@include absolute-center;
+	line-height: 26px;
+	text-align: center;
+	font-size: 12px;
+	color:#7f7f7f;
+	//@include open-sans(bold);
+}
+
+
+$pagination-map: sprite-map('pagination/*.png', $spacing:15px);
+
+@each $item in (prev, next){
+	.pagination__item-#{$item}{
+		.pagination__mark{
+			@include get-sprite($pagination-map, $item);
+			top: 27px;
+		}
+	}
+}

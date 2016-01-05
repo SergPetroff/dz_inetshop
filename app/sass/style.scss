@@ -2,23 +2,32 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@mixin inlineblock ($valine: top) {
+	display: inline-block;
+	vertical-align: $valine;
+}
 
-@import "compass/reset";
-
-/*@import "../bower/normalize-scss/sass/_normalize.scss";*/
-@import "include/_navmenu.scss";
-@import "include/_maincontent.scss";
-@import "include/_aside.scss";
-$soc-spacing: 5px;
-
-@import "soc/*.png";
-@include all-soc-sprites;
+@mixin absolute-center{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
 
 
-$aside-spacing: 5px;
-@import "aside/*.png";
-@include all-aside-sprites;
+@mixin clearfix{
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
 
+	&:after{
+		clear: both;
+	}
+}
 
 @mixin vertical-align {
     position: relative;
@@ -27,13 +36,62 @@ $aside-spacing: 5px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true){
+	$sprite-image: sprite-file($map, $sprite);
+	$sprite-map: sprite-url($map);
+	$sprite-position: sprite-position($map, $sprite);
+	background: $sprite-map $sprite-position $repeat;
+	  
+	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+	// Checks to see if the user wants height returned
+	@if $height == true{
+	  // Gets the height of the sprite-image
+	  $sprite-height: image-height($sprite-image);
+	  // Returns the height
+	  height: $sprite-height;
+	}
+	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+	// Checks to see if the user wants height returned
+	@if $width == true{
+	  // Gets the height of the sprite-image
+	  $sprite-width: image-width($sprite-image);
+	  // Returns the width
+		width: $sprite-width;
+	}
+}
+
+
+
+@import "compass/reset";
+
+/* @import "../bower/normalize-scss/_normalize.scss"; */
+@import "include/_fonts.scss";
+@import "include/_navmenu.scss";
+@import "include/_maincontent.scss";
+@import "include/_aside.scss";
+@import "include/_footer.scss";
+@import "include/_social.scss";
+@import "include/_sort.scss";
+@import "include/_products.scss";
+@import "include/_pagination.scss";
+
+$social-spacing: 15px;
+$social-layout:horizontal;
+@import "social/*.png";
+@include all-social-sprites;
+
+
+$aside-spacing: 5px;
+@import "aside/*.png";
+@include all-aside-sprites;
+
 /*Переменные*/
 $bgcolor1:#ffffff;
 $bgcolor2:#f4f4f4;
 $mainwidth:1100px;
 $clrOrang:#ff6602;
-
-
+$black:#333333;
+$body-font: 'Open Sans', sans-serif;
 
 
 /*Функциональные стили*/
@@ -72,7 +130,10 @@ ul{
 
 
 html{ height: 100%; }
-body{background:$bgcolor2}
+body{
+	background:#f4f4f4;
+	font: 16px $body-font;
+}
 
 
 .top-block{
@@ -80,24 +141,9 @@ body{background:$bgcolor2}
 	height:77px;
 }
 
-.social__item{
-	margin-left:17px;
-	display:inline-block;
-}
-.social__item:first-child{
-	margin-left:0
-}
-
-.social__link{
-	display:block;
-	width:27px;
-	height:27px;	
-}
-
-
 .bottom-block{
 	background:$bgcolor2;
-	height:96px;
+	height:95px;
 }
 .top-block__wrap{
 	width:$mainwidth;
@@ -132,6 +178,15 @@ body{background:$bgcolor2}
   margin-right:5px;
 }
 
+.top-block_phone_num{
+	color:$black;
+	font-size: 18px;
+}
+
+.top-block__adres__text{
+	font-size: 18px;
+}
+
 .logo{
 	overflow:hidden;
 	width:238px;
@@ -141,7 +196,9 @@ body{background:$bgcolor2}
 .logo-img{
 	width:100%;
 }
-
+.nav-site{
+	width:73%;
+}
 .search{
 	vertical-align:top;
 	height:34px;
@@ -158,6 +215,7 @@ body{background:$bgcolor2}
 }
 
 .search__btn{
+	margin-left: -5px;
 	width:80px;
 	height:inherit;
 	background:$clrOrang;
@@ -171,8 +229,17 @@ body{background:$bgcolor2}
 	padding-top: 8px;
 	display:inline-block;
 	vertical-align:middle;
+	font-size: 18px;
 	color:#333333;
 	margin-left:33px;
+	text-decoration: underline;
+}
+
+.header_navi{
+	@include inlineblock();
+	.active{
+		color:$clrOrang;
+	}
 }
 
 /*Основной блок*/
@@ -184,3 +251,9 @@ body{background:$bgcolor2}
 	width: 1100px;
 	margin:0 auto;
 }
+
+.main-content__wrap{
+	width: 1100px;
+	margin:0 auto;
+}
+

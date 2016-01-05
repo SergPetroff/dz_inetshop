@@ -1,0 +1,72 @@
+.wrap-aside.left
+	.aside-typegoods
+		.typegoods__item
+			a.typegoods__link(href="#") Флагманы
+		.typegoods__item
+			a.typegoods__link.lnk-active(href="#") Бюджетная линейка
+	ul.asidebar-list
+		li.sidebar-item.exist-goods
+			h3.sidebar__item__title 
+				a.sidebar__title__link(href="#") Наличие в магазинах
+			.sidebar-item__content
+				ul.exist__list
+					li.exist__item
+						input.exist__item__input(type="radio" name="exist" value="all" id="all") 						
+						label.exist__item__label(for="all") 
+							.exist__custom-btn-active
+							.exist__custom-lbl Во всех магазинах									
+					li.exist__item
+						input.exist__item__input(type="radio" name="exist" value="near" id="near")
+						label.exist__item__label(for="near") 
+							.exist__custom-btn
+							.exist__custom-lbl В ближайшем ко мне магазине
+		li.sidebar-item.brands
+			h3.sidebar__item__title 
+				a.sidebar__title__link(href="#") Бренды
+			.sidebar-item__content
+				ul.choice-list
+					-var brands = ["Lenovo","Apple","Samsung","Asus","Motorola"]
+					each brand, indx in brands
+						li.choice__item
+							label.choice-lbl(for="choice#{indx}") 
+								input.choice-chkbx(type="checkbox" value="#{brand}" id="choice#{indx}")
+								.choice__custom-chkbx.aside-choice-box
+								.choice__custom-lbl #{brand}
+
+				.brands__resetfilter
+					a.resetfilter__link(href="#") Сбросить фильтр
+		li.sidebar-item.price
+			h3.sidebar__item__title 
+				a.sidebar__title__link(href="#") Цена
+			.sidebar-item__content
+					.pricefilter-wrap
+						label.price__lbl-from(for="pricefrom") От
+						input.price__inpt-from(type="text" id="pricefrom")
+						label.price__lbl-to(for="priceto") до
+						input.price__inpt-to(type="text" id="priceto")
+		li.sidebar-item
+			h3.sidebar__item__title 
+				a.sidebar__title__link(href="#") Цвет
+			.sidebar-item__content
+				ul.choice-color
+					-var colorlist = ["ffffff","cccccc","000000","0a3153","ff1800","fff343","fb914a","92c37c","40a6ff","9870ad","dc78ad","7f401d"]
+					each color in colorlist
+						li.choice-color__item(style = "background-color:#" + color)
+							a.color-link(href="#")
+		li.sidebar-item
+			h3.sidebar__item__title 
+				a.sidebar__title__link(href="#") Операционная система
+			.sidebar-item__content
+				ul.choice-list
+					-var OSList = ["Android","IOS","WindowsMobile","Symbian","Custom"]
+					each item in OSList
+						li.choice__item
+							label.choice-lbl(for="choice#{item}") 
+								input.choice-chkbx(type="checkbox" value="#{item}" id="choice#{item}")
+								.choice__custom-chkbx.aside-choice-box
+								.choice__custom-lbl #{item}
+				.filteropersys-reset
+					a.resetfilter__link(href="#") Сбросить фильтр
+
+
+

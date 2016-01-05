@@ -1,16 +1,21 @@
--var itemNav = ["Планшеты","Мобильные телефоны","Mp3 плееры","Персоональные комптютеры","Ноутбуки","Аксессуары","Бытовая техника"]
-
-mixin footernavigation(items)
-	each item in items
-		a(href="#") #{item}
-		
 footer
-	.footer-wrapper
-		.footer_logo
-			img.footer_logo_img(alt="Логотип")
-		ul.footer-block_social
-			li: a(href="#")
-			li: a(href="#")
-			li: a(href="#")
-		.footer-navi
-			+footernavigation(itemNav)
+	.footer-top
+		.container.clearfix
+			.footer__left.left
+				a.footer_logo
+					img.footer_logo_img(src="app/img/logo-footer.png" alt="Логотип")
+					.footer_logo-text cooltech
+			.footer__right.right
+				ul.footer__social-list
+					li.footer__social-item: a.footer__social-link.social-fb(href="#")
+					li.footer__social-item: a.footer__social-link.social-vk(href="#")
+					li.footer__social-item: a.footer__social-link.social-tw(href="#")
+				.footer-navi
+					ul.footer__navilist
+						-var itemNav = ["Планшеты","Мобильные телефоны","Mp3 плееры","Персоональные комптютеры","Ноутбуки","Аксессуары","Бытовая техника"]
+								each item in itemNav
+									li.footer-navi__item
+										a.footer-navi__link(href="#") #{item}
+	.footer-bottom
+		.container
+			.footer__copyright All right reserved. 2016. No copy alowed.

@@ -35,18 +35,25 @@
 	background:#fbfbfb;
 }
 
-.sidebar__item__titile{
+.sidebar__item__title{
 	padding: 15px 0 15px 30px;
 }
 .sidebar__title__link{
 	color:black;
 	font-size:20px;
 }
-.sidebar__title__link:after{
-	content:url(../img/btn-accardeon.png);
-	float:right;
-	padding-right:9px;
-
+.sidebar__item__title:hover{
+	&:after{
+	    display: inline-block;
+	    content: "";
+	    background-image: url('../img/aside-s78ce8c9693.png');
+	  	background-repeat: no-repeat;
+	    background-position: 0 0;
+	    width: 20px;
+	    height: 15px;
+	    float: right;
+    	margin: 7px 12px;
+	}
 }
 
 .sidebar-item__content{
@@ -78,28 +85,6 @@
 	display: inline-block;
 }
 
-/*.exist__item__label:before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
- 	border-radius: 14px;
- 	border: 3px solid #dee1e4;
-    margin-right: 10px;  
-}*/
-
-
-/*.exist__item__input:checked + .exist__item__label:before{
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
- 	border-radius: 14px;
- 	border: 3px solid #ff6602;
-    margin-right: 10px;  
-    background:#ff6602;
-}*/
-
 .exist__custom-btn{
 	display: inline-block;
     width: 16px;
@@ -126,17 +111,20 @@
 	display: inline-block;
 }
 
-/*Бренд*/
+/*Список выбора*/
 
-.brands-list{
+.choice-list{
 	margin-bottom: 17px;
 }
 
-.brand-chkbx{
+.choice-chkbx{
 	display:none;
 }
 
-.brand__custom-chkbx{
+.choice-chkbx:checked + .aside-choice-box {
+   background-position: 0 -16px;
+  }
+.choice__custom-chkbx{
 	display:inline-block;
 	width:20px;
 	height:20px;
@@ -144,7 +132,7 @@
 	top:5px;	
 }
 
-.brand__custom-lbl{
+.choice__custom-lbl{
     margin-left: 8px;
 	display:inline-block;
 }
@@ -153,20 +141,44 @@
 
 .price {
 	.sidebar-item__content{
-		input{
-			display:inline-block;
-		    
-		    width: 82px;
-		    border: #dee1e4 1px solid;
-		    outline: none;
-		    line-height: 27px;
-		    padding: 0 10px;
-		    border-radius: 4px;
-		    margin-left: 12px;
-		    font-size: 14px;
-		}
-		label{
-			display:inline-block;
-		}
+			.pricefilter-wrap{
+				input{
+					display:inline-block;
+				    
+				    width: 82px;
+				    border: #dee1e4 1px solid;
+				    outline: none;
+				    line-height: 27px;
+				    padding: 0 10px;
+				    border-radius: 4px;
+				    margin-left: 12px;
+				    font-size: 14px;
+				}
+				label{
+					display:inline-block;
+				}
+			}
 	}
+}
+
+/*Color*/
+
+$sizecolorcub:37px;
+
+.choice-color__item{
+	display:inline-block;
+	border: solid 2px transparent;
+	/* margin:15px 15px; */
+	margin-right: 19px;
+    margin-top: 17px;
+				&:hover{
+						border: solid 2px #ff6600;
+					}
+	.color-link{
+			border: solid 1px #dee1e4;
+			display:block;
+			height:$sizecolorcub;
+			width:$sizecolorcub;
+
+		}
 }

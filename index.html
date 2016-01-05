@@ -15,14 +15,18 @@
       <div class="header-wrapper">
         <div class="top-block">
           <div class="top-block__wrap clearfix">
-            <ul class="top-block__social inlnblck">
-              <li class="social__item"><a href="#" class="social__link soc-FB"></a></li>
-              <li class="social__item"><a href="#" class="social__link soc-VK"></a></li>
-              <li class="social__item"><a href="#" class="social__link soc-tw"></a></li>
-            </ul>
-            <div class="top-block__contacts inlnblck right">
-              <div class="contacts__adres inlnblck"><span class="top-block__adres__text">ул.Маяковского 6, офис 17</span></div>
-              <div class="contacts__phone inlnblck"><span class="top-block_phone_num">+7 (921) 123-12-13</span></div>
+            <div class="header__left left">
+              <ul class="header__social-list">
+                <li class="header__social-item"><a href="#" class="header__social-link social-fb-header"></a></li>
+                <li class="header__social-item"><a href="#" class="header__social-link social-vk-header"></a></li>
+                <li class="header__social-item"><a href="#" class="header__social-link social-tw-header"></a></li>
+              </ul>
+            </div>
+            <div class="header__right right">
+              <div class="top-block__contacts inlnblck right">
+                <div class="contacts__adres inlnblck"><span class="top-block__adres__text">ул.Маяковского 6, офис 17</span></div>
+                <div class="contacts__phone inlnblck"><a href="tel:79211231213" class="top-block_phone_num">+7 (921) 123-12-13</a></div>
+              </div>
             </div>
           </div>
         </div>
@@ -32,7 +36,8 @@
               <form class="search inlnblck">
                 <input type="search" placeholder="Что будем искать?" class="search__inpt">
                 <input type="submit" value="Найти" class="search__btn">
-              </form><a href="#" class="maps">Карта проезда</a><a href="#" class="history-order">История заказов</a><a href="#" class="basket">Корзина</a>
+              </form>
+              <div class="header_navi"><a href="#" class="maps active">Карта проезда</a><a href="#" class="history-order">История заказов</a><a href="#" class="basket">Корзина</a></div>
             </div>
           </div>
         </div>
@@ -55,15 +60,15 @@
         <div class="crumb__item level2"><a href="#" class="crumb__link active">Каталог</a></div>
       </div>
       <h1 class="content__title">Мобильные телефоны</h1>
-      <div class="main-content__wrap">
-        <div class="wrap-aside"> 
+      <div class="main-content__wrap clearfix">
+        <div class="wrap-aside left">
           <div class="aside-typegoods">
             <div class="typegoods__item"><a href="#" class="typegoods__link">Флагманы</a></div>
             <div class="typegoods__item"><a href="#" class="typegoods__link lnk-active">Бюджетная линейка</a></div>
           </div>
           <ul class="asidebar-list">
             <li class="sidebar-item exist-goods">
-              <h3 class="sidebar__item__titile"> <a href="#" class="sidebar__title__link">Наличие в магазинах</a></h3>
+              <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Наличие в магазинах</a></h3>
               <div class="sidebar-item__content">
                 <ul class="exist__list">
                   <li class="exist__item">
@@ -84,126 +89,773 @@
               </div>
             </li>
             <li class="sidebar-item brands">
-              <h3 class="sidebar__item__titile"> <a href="#" class="sidebar__title__link">Бренды</a></h3>
+              <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Бренды</a></h3>
               <div class="sidebar-item__content">
-                    <ul class="brands-list">
-                      <li class="brands__item">
-                        <input type="checkbox" value="Lenovo" id="brandLenovo" class="brand-chkbx">
-                        <label for="brandLenovo" class="brand-lbl"> 
-                          <div class="brand__custom-chkbx aside-brand-box"></div>
-                          <div class="brand__custom-lbl">Lenovo</div>
-                        </label>
-                      </li>
-                      <li class="brands__item">
-                        <input type="checkbox" value="Apple" id="brandApple" class="brand-chkbx">
-                        <label for="brandApple" class="brand-lbl"> 
-                          <div class="brand__custom-chkbx aside-brand-box"></div>
-                          <div class="brand__custom-lbl">Apple</div>
-                        </label>
-                      </li>
-                      <li class="brands__item">
-                        <input type="checkbox" value="Samsung" id="brandSamsung" class="brand-chkbx">
-                        <label for="brandSamsung" class="brand-lbl"> 
-                          <div class="brand__custom-chkbx aside-brand-box"></div>
-                          <div class="brand__custom-lbl">Samsung</div>
-                        </label>
-                      </li>
-                      <li class="brands__item">
-                        <input type="checkbox" value="Asus" id="brandAsus" class="brand-chkbx">
-                        <label for="brandAsus" class="brand-lbl"> 
-                          <div class="brand__custom-chkbx aside-brand-box"></div>
-                          <div class="brand__custom-lbl">Asus</div>
-                        </label>
-                      </li>
-                      <li class="brands__item">
-                        <input type="checkbox" value="Motorola" id="brandMotorola" class="brand-chkbx">
-                        <label for="brandMotorola" class="brand-lbl"> 
-                          <div class="brand__custom-chkbx aside-brand-box"></div>
-                          <div class="brand__custom-lbl">Motorola</div>
-                        </label>
-                      </li>
-                    </ul>
+                <ul class="choice-list">
+                  <li class="choice__item">
+                    <label for="choice0" class="choice-lbl"> 
+                      <input type="checkbox" value="Lenovo" id="choice0" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Lenovo</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choice1" class="choice-lbl"> 
+                      <input type="checkbox" value="Apple" id="choice1" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Apple</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choice2" class="choice-lbl"> 
+                      <input type="checkbox" value="Samsung" id="choice2" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Samsung</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choice3" class="choice-lbl"> 
+                      <input type="checkbox" value="Asus" id="choice3" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Asus</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choice4" class="choice-lbl"> 
+                      <input type="checkbox" value="Motorola" id="choice4" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Motorola</div>
+                    </label>
+                  </li>
+                </ul>
                 <div class="brands__resetfilter"><a href="#" class="resetfilter__link">Сбросить фильтр</a></div>
               </div>
             </li>
             <li class="sidebar-item price">
-              <h3 class="sidebar__item__titile"> <a href="#" class="sidebar__title__link">Цена</a></h3>
+              <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Цена</a></h3>
               <div class="sidebar-item__content">
-                <label for="pricefrom" class="price__lbl-from">От</label>
-                <input type="text" id="pricefrom" class="price__inpt-from">
-                <label for="priceto" class="price__lbl-to">до</label>
-                <input type="text" id="priceto" class="price__inpt-to">
+                <div class="pricefilter-wrap">
+                  <label for="pricefrom" class="price__lbl-from">От</label>
+                  <input type="text" id="pricefrom" class="price__inpt-from">
+                  <label for="priceto" class="price__lbl-to">до</label>
+                  <input type="text" id="priceto" class="price__inpt-to">
+                </div>
               </div>
             </li>
-            <li class="sidebar-item price">
-              <h3 class="sidebar__item__titile"> <a href="#" class="sidebar__title__link">Цвет</a></h3>
-              <div class="sidebar-item__content"></div>
-            </li>
-            <li class="sidebar-item price">
-              <h3 class="sidebar__item__titile"> <a href="#" class="sidebar__title__link">Операционная система</a></h3>
+            <li class="sidebar-item">
+              <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Цвет</a></h3>
               <div class="sidebar-item__content">
-                    <ul class="os-list">
-                      <li class="os-list__item">
-                        <input type="checkbox" value="Android" id="osAndroid" class="os-item-chkbx">
-                        <label for="osAndroid" class="os-item-lbl"> 
-                          <div class="os-item-chkbx aside-brand-box"></div>
-                          <div class="os-item-lbl">Android</div>
-                        </label>
-                      </li>
-                      <li class="os-list__item">
-                        <input type="checkbox" value="IOS" id="osIOS" class="os-item-chkbx">
-                        <label for="osIOS" class="os-item-lbl"> 
-                          <div class="os-item-chkbx aside-brand-box"></div>
-                          <div class="os-item-lbl">IOS</div>
-                        </label>
-                      </li>
-                      <li class="os-list__item">
-                        <input type="checkbox" value="WindowsMobile" id="osWindowsMobile" class="os-item-chkbx">
-                        <label for="osWindowsMobile" class="os-item-lbl"> 
-                          <div class="os-item-chkbx aside-brand-box"></div>
-                          <div class="os-item-lbl">WindowsMobile</div>
-                        </label>
-                      </li>
-                      <li class="os-list__item">
-                        <input type="checkbox" value="Symbian" id="osSymbian" class="os-item-chkbx">
-                        <label for="osSymbian" class="os-item-lbl"> 
-                          <div class="os-item-chkbx aside-brand-box"></div>
-                          <div class="os-item-lbl">Symbian</div>
-                        </label>
-                      </li>
-                      <li class="os-list__item">
-                        <input type="checkbox" value="Custom" id="osCustom" class="os-item-chkbx">
-                        <label for="osCustom" class="os-item-lbl"> 
-                          <div class="os-item-chkbx aside-brand-box"></div>
-                          <div class="os-item-lbl">Custom</div>
-                        </label>
-                      </li>
-                    </ul>
+                <ul class="choice-color">
+                  <li style="background-color:#ffffff" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#cccccc" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#000000" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#0a3153" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#ff1800" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#fff343" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#fb914a" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#92c37c" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#40a6ff" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#9870ad" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#dc78ad" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                  <li style="background-color:#7f401d" class="choice-color__item"><a href="#" class="color-link"></a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-item">
+              <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Операционная система</a></h3>
+              <div class="sidebar-item__content">
+                <ul class="choice-list">
+                  <li class="choice__item">
+                    <label for="choiceAndroid" class="choice-lbl"> 
+                      <input type="checkbox" value="Android" id="choiceAndroid" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Android</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choiceIOS" class="choice-lbl"> 
+                      <input type="checkbox" value="IOS" id="choiceIOS" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">IOS</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choiceWindowsMobile" class="choice-lbl"> 
+                      <input type="checkbox" value="WindowsMobile" id="choiceWindowsMobile" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">WindowsMobile</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choiceSymbian" class="choice-lbl"> 
+                      <input type="checkbox" value="Symbian" id="choiceSymbian" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Symbian</div>
+                    </label>
+                  </li>
+                  <li class="choice__item">
+                    <label for="choiceCustom" class="choice-lbl"> 
+                      <input type="checkbox" value="Custom" id="choiceCustom" class="choice-chkbx">
+                      <div class="choice__custom-chkbx aside-choice-box"></div>
+                      <div class="choice__custom-lbl">Custom</div>
+                    </label>
+                  </li>
+                </ul>
+                <div class="filteropersys-reset"><a href="#" class="resetfilter__link">Сбросить фильтр</a></div>
               </div>
             </li>
           </ul>
         </div>
-        <div class="body_content">
-          <header class="content-nav-bar"></header>
-          <div class="main-content"></div>
+        <div class="content right">
+          <div class="sort clearfix">
+            <div class="sort__left left">
+              <div class="sort__select-wrap">
+                <div class="sort__title">Сортировать по</div>
+                <div class="sort__select">
+                  <select class="sort__select-elem">
+                    <option value="">по цене</option>
+                    <option value="">по популярности</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="sort__right right">
+              <div class="sort__title">Вид каталога</div>
+              <div class="sort__view">
+                <ul class="sort__view-list">
+                  <li data-view="rows" class="sort__view-item sort__view-rows"><a href="#" class="sort__view-link">
+                      <div class="sort__view-icon"></div></a></li>
+                  <li data-view="grids" class="sort__view-item sort__view-grids"><a href="#" class="sort__view-link">
+                      <div class="sort__view-icon"></div></a></li>
+                  <li data-view="lines" class="sort__view-item sort__view-lines"><a href="#" class="sort__view-link">
+                      <div class="sort__view-icon"></div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="products">
+            <ul class="products__list">
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/3" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/3" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/3" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/4" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/4" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/4" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/5" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/5" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/5" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/6" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/6" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/6" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/7" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/7" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/7" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="products__item">
+                <div class="products__item-inner clearfix">
+                  <div class="products__item-left left">
+                    <div class="products__slideshow">
+                      <div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/200/200/technics/6" alt="" class="products__slideshow-img"></a>
+                        <ul class="products__slideshow-thumbs">
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/8" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/8" alt="" class="products__slideshow-thumbs-img"></a></li>
+                          <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/8" alt="" class="products__slideshow-thumbs-img"></a></li>
+                        </ul>
+                      </div>
+                      <div class="products__article">
+                        <div class="products__article-word">Артикул</div>
+                        <div class="products__article-num">9874654 </div>
+                      </div>
+                    </div>
+                    <div class="products__desc">
+                      <div class="products__desc-title">SAMSUNG</div>
+                      <ul class="products__desc-options">
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Тип сим карты</div>
+                          <div class="products__desc-item-param">Микро сим</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Количество сим карт</div>
+                          <div class="products__desc-item-param">1</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Цвет</div>
+                          <div class="products__desc-item-param">Белый</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">ОС</div>
+                          <div class="products__desc-item-param">Андроид</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">Связь 3G</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                        <li class="products__desc-item">
+                          <div class="products__desc-item-title">GPS модуль</div>
+                          <div class="products__desc-item-param">Есть</div>
+                        </li>
+                      </ul>
+                      <div class="products__rating">
+                        <ul class="products__rating-stars">
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item products__rating-stars-item-filled"></li>
+                          <li class="products__rating-stars-item"></li>
+                          <li class="products__rating-stars-item"></li>
+                        </ul>
+                        <div class="products_rating-amout">3</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products__right right">
+                    <div class="products__info">
+                      <div class="products__price">11290<i class="rub"></i></div>
+                      <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                        <div class="products__availability">В наличии</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item pagination__item-prev"><a href="#" class="pagination__link">
+                    <div class="pagination__mark"></div></a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">
+                    <div class="pagination__mark">1</div></a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">
+                    <div class="pagination__mark">2</div></a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">
+                    <div class="pagination__mark">3</div></a></li>
+                <li class="pagination__item pagination__item-next"><a href="#" class="pagination__link">
+                    <div class="pagination__mark"></div></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="important-info">
-          <h1 class="important-info_title">Важная информация</h1>
-          <div class="important-info_content"></div>
+      </div>
+      <div class="important-info">
+        <h1 class="important-info__title">Важная информация</h1>
+        <div class="important-info__text">
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!</p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!</p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!</p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!</p>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="footer-wrapper">
-        <div class="footer_logo"><img alt="Логотип" class="footer_logo_img"></div>
-        <ul class="footer-block_social">
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-        <div class="footer-navi"><a href="#">Планшеты</a><a href="#">Мобильные телефоны</a><a href="#">Mp3 плееры</a><a href="#">Персоональные комптютеры</a><a href="#">Ноутбуки</a><a href="#">Аксессуары</a><a href="#">Бытовая техника</a>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

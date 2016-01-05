@@ -1,0 +1,70 @@
+/*sort menu*/
+
+.content{
+	width: 743px;
+}
+.sort{
+	background:#e4ebee;
+	border:1px solid #dee1e4;
+	border-radius:4px;
+	margin-bottom:40px;
+}
+
+.sort__left{
+    margin: 15px 20px;
+}
+.sort__title{
+	display:inline-block;
+	    vertical-align: middle;
+}
+.sort__select{
+	display:inline-block;
+}
+
+.sort__right{
+	 .sort__title{
+	 	margin-top: -40px;
+	 }
+}
+.sort__view-item{
+	display:inline-block;
+}
+
+.sort__view{
+	display:inline-block;
+}
+
+
+.sort__view-icon {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+/*icons view*/
+
+$views-map: sprite-map('view/*.png', $spacing:50px);
+$items: rows, grids, lines;
+
+@each $item in $items{
+	.sort__view-#{$item}{
+		.sort__view-icon{
+			@include get-sprite($views-map, $item)
+		}
+		&:hover{
+			$hover-icon: $item + '-hover';
+			.sort__view-icon{
+				@include get-sprite($views-map, $hover-icon)
+			}
+		}
+	}
+}
+
+.sort__view-link{
+	width:50px;
+	height:50px;
+	display:block;
+	position:relative;
+}

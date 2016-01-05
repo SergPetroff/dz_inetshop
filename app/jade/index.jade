@@ -1,11 +1,5 @@
 -var itemNav = ["Планшеты","Мобильные телефоны","Mp3 плееры","Персоональные комптютеры","Ноутбуки","Аксессуары","Бытовая техника"]
 
-
-mixin footernavigation(items)
-	each item in items
-		a(href="#") #{item}
-
-
 doctype html
 html
 	head
@@ -20,6 +14,110 @@ html
 		
 
 	body
-		include _header
-		include _content
-		include _footer
+		header
+			include _header
+		include _navi
+		.main-content
+			.Breadcrumb
+				.crumb__item.level1
+					a.crumb__link(href="#") Главная
+				.crumb__item.level2
+					a.crumb__link.active(href="#") Каталог
+			h1.content__title Мобильные телефоны
+			.main-content__wrap.clearfix
+				include _filter
+				.content.right
+					.sort.clearfix
+						.sort__left.left
+							.sort__select-wrap
+								.sort__title Сортировать по
+								.sort__select
+									select.sort__select-elem
+										-var options = ["по цене","по популярности"]
+										each option in options
+											option(value="")= option
+						.sort__right.right
+							.sort__title Вид каталога
+							.sort__view
+								ul.sort__view-list
+									-var views = ["rows","grids","lines"]
+									each item in views
+										li(class="sort__view-item sort__view-" + item data-view= item)
+											a(href="#").sort__view-link
+												.sort__view-icon
+					.products
+						ul.products__list
+							- for (var i = 0; i < 9; i++)
+								li.products__item
+									.products__item-inner.clearfix
+										.products__item-left.left
+											.products__slideshow
+												.products__slideshow-block
+													a(href="#").products__slideshow-display
+														img(src="http://lorempixel.com/200/200/technics/6" alt="").products__slideshow-img
+													ul.products__slideshow-thumbs
+														- for (var j = 0; j < 3; j++)
+															li.products__slideshow-item
+																a(href="#").products__slideshow-link
+																	img(src="http://lorempixel.com/45/45/technics/" + i alt="").products__slideshow-thumbs-img
+												.products__article
+													.products__article-word Артикул
+													.products__article-num 9874654 
+											.products__desc
+												.products__desc-title SAMSUNG
+												ul.products__desc-options
+													li.products__desc-item
+														.products__desc-item-title Тип сим карты
+														.products__desc-item-param Микро сим
+													li.products__desc-item
+														.products__desc-item-title Количество сим карт
+														.products__desc-item-param 1
+													li.products__desc-item
+														.products__desc-item-title Цвет
+														.products__desc-item-param Белый
+													li.products__desc-item
+														.products__desc-item-title ОС
+														.products__desc-item-param Андроид
+													li.products__desc-item
+														.products__desc-item-title Связь 3G
+														.products__desc-item-param Есть
+													li.products__desc-item
+														.products__desc-item-title GPS модуль
+														.products__desc-item-param Есть
+												.products__rating
+													ul.products__rating-stars
+														li.products__rating-stars-item.products__rating-stars-item-filled
+														li.products__rating-stars-item.products__rating-stars-item-filled
+														li.products__rating-stars-item.products__rating-stars-item-filled
+														li.products__rating-stars-item.
+														li.products__rating-stars-item.
+													.products_rating-amout 3
+										.products__right.right
+											.products__info
+												.products__price 11290
+													i.rub
+												.products__info-bottom
+													a(href="#").products__buy-btn В корзину
+													.products__availability В наличии
+						.pagination
+							ul.pagination__list
+								li.pagination__item.pagination__item-prev
+									a(href="#").pagination__link
+										.pagination__mark
+								- for(var i = 1; i < 4; i++)
+									li.pagination__item
+										a(href="#").pagination__link
+											.pagination__mark= i
+								li.pagination__item.pagination__item-next
+									a(href="#").pagination__link
+										.pagination__mark
+
+			.important-info
+					h1.important-info__title
+						|Важная информация
+					.important-info__text
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates commodi officia natus, saepe cumque nemo ratione, a dolorem earum nobis, minus. Nobis ipsa est sequi ab cupiditate, corporis possimus quibusdam!
+		//- include _footer

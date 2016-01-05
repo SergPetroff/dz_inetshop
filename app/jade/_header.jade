@@ -1,27 +1,29 @@
-header
-	.header-wrapper
-		.top-block
-			.top-block__wrap.clearfix
-				ul.top-block__social.inlnblck
-					li.social__item: a.social__link.soc-FB(href="#")
-					li.social__item: a.social__link.soc-VK(href="#")
-					li.social__item: a.social__link.soc-tw(href="#")
+.header-wrapper
+	.top-block
+		.top-block__wrap.clearfix
+			.header__left.left
+				ul.header__social-list
+					li.header__social-item: a.header__social-link.social-fb-header(href="#")
+					li.header__social-item: a.header__social-link.social-vk-header(href="#")
+					li.header__social-item: a.header__social-link.social-tw-header(href="#")
+			.header__right.right
 				.top-block__contacts.inlnblck.right
 					.contacts__adres.inlnblck
 						span.top-block__adres__text ул.Маяковского 6, офис 17
 					.contacts__phone.inlnblck
-						span.top-block_phone_num +7 (921) 123-12-13
-		.bottom-block
-			.bottom-block__wrap.clearfix
-				a.logo.inlnblck(href="#" alt="logo")
-					img.logo-img(src="app/img/cooltech.png" alt="Логотип")
+						a.top-block_phone_num(href="tel:79211231213") +7 (921) 123-12-13
+	.bottom-block
+		.bottom-block__wrap.clearfix
+			a.logo.inlnblck(href="#" alt="logo")
+				img.logo-img(src="app/img/cooltech.png" alt="Логотип")
 
 
-				.nav-site.inlnblck.right
-					form.search.inlnblck
-						input.search__inpt(type="search" placeholder="Что будем искать?")
-						input.search__btn(type="submit" value="Найти")
-					a.maps(href="#") Карта проезда
+			.nav-site.inlnblck.right
+				form.search.inlnblck
+					input.search__inpt(type="search" placeholder="Что будем искать?")
+					input.search__btn(type="submit" value="Найти")
+				.header_navi
+					a.maps.active(href="#") Карта проезда
 					a.history-order(href="#") История заказов
 					a.basket(href="#") Корзина
 

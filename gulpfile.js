@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade'); // Плагин для Jade
 
 gulp.task('jade', function() { // задача на jade
-   gulp.src('app/jade/**/*.jade')
+   gulp.src('app/jade/index.jade')
         .pipe(jade({
             pretty: true
         }))  
@@ -35,7 +35,7 @@ gulp.task('server',function (){
 
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.scss', ['compass']);
-	gulp.watch('app/jade/index.jade', ['jade']);
+	gulp.watch('app/jade/**/*.jade', ['jade']);
 	gulp.watch([
 		'index.html',
 		'app/css/*.css'
