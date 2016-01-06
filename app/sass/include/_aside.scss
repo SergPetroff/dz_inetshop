@@ -1,6 +1,6 @@
 /*aside*/
 .wrap-aside{
-	max-width:333px;
+	width:333px;
 
 }
 .aside-typegoods{
@@ -38,21 +38,36 @@
 	&:first-child{
 		border-top: 0 none;
 	}
+	&.active{
+		.sidebar__title__link{
+			&:after{
+			    display: block;
+			    content: "";
+			    background-image: url('../img/aside/btn-accardeon.png');
+			  	background-repeat: no-repeat;
+			    background-position: 0 0;
+			    width: 20px;
+			    height: 15px;
+			   	position: relative;
+			    top: -16px;
+			    left: 263px;
+			}
+		}
+
+	}
 }
 
 .sidebar__item__title{
-	padding: 15px 0 15px 30px;
+	padding: 15px 0 0 30px;
 }
 .sidebar__title__link{
 	display:block;
 	color:black;
 	font-size:20px;
-}
-.sidebar__item__title{
-	&:after{
+		&:after{
 	    display: block;
 	    content: "";
-	    background-image: url('../img/aside-s78ce8c9693.png');
+	    background-image: url('../img/aside/btn-accardeon-closed.png');
 	  	background-repeat: no-repeat;
 	    background-position: 0 0;
 	    width: 20px;
@@ -61,6 +76,9 @@
 	    top: -16px;
 	    left: 263px;
 	}
+}
+.sidebar__item__title{
+
 }
 
 .sidebar-item__content{
@@ -160,7 +178,8 @@
     transition: opacity 0.2s ease;
 }
 .choice-chkbx:checked + .aside-choice-box {
-   background-position: 0 -16px;
+  /*  background-position: 0 -16px; */
+  	background: url(../img/aside/choice-box-checked.png)
   }
 .choice__custom-chkbx{
 	display:inline-block;

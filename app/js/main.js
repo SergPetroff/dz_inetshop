@@ -3,13 +3,13 @@ var mainjs = (function(){
 		_setUpListeners();
 	},
 	_setUpListeners = function(){
-		$(".sidebar__title__link").on('click',_accardeon);
+		/*$(".sidebar__title__link").on('click',_accardeon);*/
 		$(".resetfilter__link").on('click',_resetfilter);
 		//$(".sort__view-item").on('click',_changeview);
 	};
 
 
-	//Accardeon
+/*	//Accardeon
 	function _accardeon(event){
 		event.preventDefault();
 		var element = $(this),
@@ -20,7 +20,7 @@ var mainjs = (function(){
 		}else{
 			content.stop(true, true).slideUp(600).addClass('hideblock');
 		}
-	}
+	}*/
 
 	//Reset filter
 	function _resetfilter(event){
@@ -95,9 +95,74 @@ var ViewStateChange = (function() {
   }
 }());
 
+var Accordeon = (function(){
+
+  var _openSection = function($this){
+    var
+      container = $this.closest('.sidebar-item'),
+      content = container.find('.sidebar-item__content'),
+      otherContent = $this.closest('.asidebar-list').find('.sidebar-item__content');
+
+    if (!container.hasClass('active')) {
+      otherContent.slideUp().closest('.sidebar-item').removeClass('active');
+
+      container.addClass('active');
+      content.stop(true, true).slideDown();
+    } else {
+      container.removeClass('active');
+      content.stop(true, true).slideUp();
+    }
+
+  }
+
+  return {
+
+    init: function(){
+      $('.sidebar__title__link').on('click', function(e){
+        e.preventDefault();
+        _openSection($(this));
+      });
+    }
+  }
+}());
+
+
+var SlideShow = (function(){
+
+  var _changeSlide = function($this){
+    var
+      container = $this.closest('.products__slideshow'),
+      path = $this.find('img').attr('src'),
+      display = container.find('.products__slideshow-img');
+
+    $this.closest('.products__slideshow-item').addClass('active')
+    .siblings().removeClass('active');
+
+    display.fadeOut(function(){
+      $(this).attr('src', path).fadeIn();
+    });
+  }
+
+  return {
+    init: function(){
+      $('.products__slideshow-link').on('click', function(e){
+        e.preventDefault();
+
+        var 
+          $this = $(this);
+
+          _changeSlide($this);
+      });
+    }
+  }
+
+}());
+
+
 $(document).ready(function() {
 	ViewStateChange.init();
-
+	Accordeon.init();
+	SlideShow.init();
 	$('.important-info__text').columnize({ width: 500 });
 	
 });
