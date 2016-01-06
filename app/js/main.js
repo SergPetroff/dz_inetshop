@@ -97,5 +97,7 @@ var ViewStateChange = (function() {
 
 $(document).ready(function() {
 	ViewStateChange.init();
+
+	$('.important-info__text').columnize({ width: 500 });
 	
 });
