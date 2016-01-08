@@ -5,6 +5,9 @@
   margin-bottom: 18px;
   width: 280px;
 }
+.ui-slider * {
+  outline: none !important;
+}
 .ui-slider .ui-slider-range {
   height: 3px;
   background-color: #ff6705;

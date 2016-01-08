@@ -3,24 +3,9 @@ var mainjs = (function(){
 		_setUpListeners();
 	},
 	_setUpListeners = function(){
-		/*$(".sidebar__title__link").on('click',_accardeon);*/
 		$(".resetfilter__link").on('click',_resetfilter);
-		//$(".sort__view-item").on('click',_changeview);
 	};
 
-
-/*	//Accardeon
-	function _accardeon(event){
-		event.preventDefault();
-		var element = $(this),
-			header = element.closest('.sidebar__item__title'),
-			content = header.siblings('.sidebar-item__content');
-		if(content.hasClass('hideblock')){
-			content.stop(true, true).slideDown(600).removeClass('hideblock');
-		}else{
-			content.stop(true, true).slideUp(600).addClass('hideblock');
-		}
-	}*/
 
 	//Reset filter
 	function _resetfilter(event){
@@ -32,18 +17,9 @@ var mainjs = (function(){
 		items.prop({"checked": false});
 	}
 
+  
 	//slider
-	$( ".sidebar__slider" ).slider({
-      range: true,
-      min: 0,
-      max: 500,
-      values: [ 75, 300 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-      }
-    });
-/*    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-      " - $" + $( "#slider-range" ).slider( "values", 1 ) );*/
+	
 	
 	if($('.sort__select-elem').length){
 		$('.sort__select-elem').select2({
@@ -159,10 +135,50 @@ var SlideShow = (function(){
 }());
 
 
+var SliderWidget = (function(){
+
+        var _insertValue = function($this){
+            var from = $this.closest('.pricefilter-wrap').find('.price__inpt-from'),
+                to = $this.closest('.pricefilter-wrap').find('.price__lbl-to');
+            var values = $this.slider('option','values');
+            $('.price__inpt-from').val(values[0]);
+             $('.price__inpt-to').val(values[1]);
+        }
+
+      return{
+        init: function(){
+        $(".sidebar__slider").each(function() {
+          var $this = $(this),
+              min = parseInt($this.data('min')),
+              max = parseInt($this.data('max'));
+
+          $this.slider({
+                  range: true,
+                  min: min,
+                  max: max,
+                  values: [ min, max ],
+                  slide: function() {
+                    /*$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );*/
+                    _insertValue($this)
+                  }
+                });
+          
+        });
+
+          
+        }
+      }
+  }());
+
+
 $(document).ready(function() {
 	ViewStateChange.init();
 	Accordeon.init();
 	SlideShow.init();
 	$('.important-info__text').columnize({ width: 500 });
+
+  if($(".sidebar__slider").length){
+    SliderWidget.init();
+  }
 	
 });

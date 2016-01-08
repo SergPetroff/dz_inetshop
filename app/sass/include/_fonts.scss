@@ -68,6 +68,7 @@
 	font-family:"als_rublregular";
 	font-style: normal;
 	&:after{
+        margin-left: 3px;
 		content:'a';
 		font-style:inherit;
 		font-size:inherit;

@@ -6,11 +6,12 @@
 	border:1px solid #dee1e4;
 	border-radius:7px;
 	overflow:hidden;
-	background:#fff;
+	/* background:#fff; */
 	margin-bottom:68px;
 }
 .products__item{
 	border-top:1px solid #dee1e4;
+	overflow:hidden;
 	&:first-child{
 		border-top:0 none;
 	}
@@ -19,6 +20,7 @@
 .products__item-inner{
 	padding:19px 22px;
 	position:relative;
+	 background:#fff;
 }
 
 .products__slideshow{
