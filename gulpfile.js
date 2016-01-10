@@ -41,4 +41,4 @@ gulp.task('watch', function() {
 		'app/css/*.css'
 	]).on('change', browserSync.reload);
 });
-gulp.task('default', ['server','watch']);
+gulp.task('default', ['jade','compass','server','watch']);

@@ -15,10 +15,13 @@
 	}
 
 	.products__item-inner{
+		padding: 18px 12px;
 		background:#fbfbfb;
 	}
 	.products__info{
 		border:none;
+		padding-left:0;
+		margin-bottom: -6px;
 	}
 	.products__slideshow{
 		width:auto;
@@ -34,6 +37,9 @@
 	}
 	.products__desc{
 		width:auto;
+		.products__desc-options{
+			margin-bottom:4px;
+		}
 	}
 	.products__right{
 		position:static;
@@ -65,7 +71,7 @@
 	}
 	.products__availability{
 		float:left;
-		margin: 5px 15px;
+		margin: 5px 28px 5px 0;
 	}
 	.products__article-word {
 
@@ -90,11 +96,6 @@
 		 width:50%;
 		 text-align:right;
 	}
-
-	.products__item-inner{
-		padding: 15px 15px;
-	}
-
 	.products__rating{
 		margin-bottom:12px;
 	}

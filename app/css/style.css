@@ -3,6 +3,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*╨Я╨╡╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╡*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -2589,7 +2590,7 @@ body .ui-tooltip {
 
 /*╤Е╨╗╨╡╨▒╨╜╤Л╨╡ ╨║╤А╨╛╤И╨║╨╕*/
 .Breadcrumb {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 }
 
 .crumb__item {
@@ -2617,8 +2618,8 @@ body .ui-tooltip {
 }
 
 .content__title {
-  font-size: 20px;
-  margin-bottom: 34px;
+  font-size: 22px;
+  margin-bottom: 26px;
 }
 
 /*attantion text*/
@@ -2642,7 +2643,7 @@ body .ui-tooltip {
 .aside-typegoods {
   border: solid 1px #dee1e4;
   border-radius: 4px;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .typegoods__item {
@@ -2650,7 +2651,7 @@ body .ui-tooltip {
 }
 
 .typegoods__link {
-  padding: 15px 30px;
+  padding: 13px 30px;
   color: #7f7f7f;
   display: block;
   border: solid 1px #dee1e4;
@@ -2683,17 +2684,18 @@ body .ui-tooltip {
   height: 15px;
   position: relative;
   top: -16px;
-  left: 263px;
+  left: 271px;
 }
 
 .sidebar__item__title {
-  padding: 15px 0 0 30px;
+  line-height: 0.4;
+  padding: 19px 0 0 26px;
 }
 
 .sidebar__title__link {
   display: block;
   color: black;
-  font-size: 20px;
+  font-size: 18px;
 }
 .sidebar__title__link:after {
   display: block;
@@ -2704,13 +2706,24 @@ body .ui-tooltip {
   width: 20px;
   height: 15px;
   position: relative;
-  top: -16px;
-  left: 263px;
+  top: -8px;
+  left: 276px;
 }
 
 .sidebar-item__content {
   padding-bottom: 20px;
   padding-left: 30px;
+}
+.sidebar-item__content.exist-content {
+  padding-bottom: 7px;
+}
+.sidebar-item__content.price-content {
+  padding-bottom: 10px;
+  padding-top: 6px;
+}
+.sidebar-item__content.color-content {
+  margin-top: -8px;
+  padding-bottom: 13px;
 }
 
 .hideblock {
@@ -2719,11 +2732,12 @@ body .ui-tooltip {
 }
 
 .exist__list {
-  padding-bottom: 10px;
+  /* margin-bottom: 10px; */
+  margin-left: -4px;
 }
 
 .exist__item {
-  padding-bottom: 5px;
+  padding-bottom: 11px;
 }
 
 .exist__item__input {
@@ -2774,6 +2788,10 @@ body .ui-tooltip {
   margin-bottom: 17px;
 }
 
+.choice__item {
+  margin-bottom: 13px;
+}
+
 .choice-lbl {
   cursor: pointer;
 }
@@ -2809,7 +2827,7 @@ body .ui-tooltip {
 
 .choice-chkbx:checked + .aside-choice-box {
   /*  background-position: 0 -16px; */
-  background: url(../img/aside/choice-box-checked.png);
+  background: url(../img/aside/choice-box-checked.png) no-repeat;
 }
 
 .choice__custom-chkbx {
@@ -2836,7 +2854,7 @@ body .ui-tooltip {
 }
 .price .sidebar-item__content .pricefilter-wrap input {
   display: inline-block;
-  width: 82px;
+  width: 55px;
   border: #dee1e4 1px solid;
   outline: none;
   line-height: 27px;
@@ -2848,11 +2866,18 @@ body .ui-tooltip {
 .price .sidebar-item__content .pricefilter-wrap label {
   display: inline-block;
 }
+.price .sidebar-item__content .pricefilter-wrap .price__inpt-from {
+  margin-right: 44px;
+}
 
 /*Color*/
+.choice-color {
+  width: 250px;
+}
+
 .choice-color__item {
   display: inline-block;
-  margin-right: 19px;
+  margin-right: 15px;
   margin-top: 17px;
 }
 .choice-color__item:hover {
@@ -2880,17 +2905,22 @@ footer {
   margin: 0 auto;
 }
 
+.footer-top__container {
+  margin-bottom: 19px;
+}
+
 .footer__left {
-  margin-top: 73px;
+  margin-top: 36px;
 }
 
 .footer__right {
-  width: 55%;
+  width: 52%;
   text-align: right;
 }
 
 .footer__social-list {
-  margin-bottom: 25px;
+  margin-right: 6px;
+  margin-bottom: 16px;
 }
 
 .footer__navilist {
@@ -2958,7 +2988,7 @@ footer {
 }
 
 .footer__social-item {
-  margin-left: 17px;
+  margin-left: 19px;
   width: 44px;
   height: 44px;
   border-radius: 22px;
@@ -2991,11 +3021,11 @@ footer {
   background: #e4ebee;
   border: 1px solid #dee1e4;
   border-radius: 4px;
-  margin-bottom: 40px;
+  margin-bottom: 17px;
 }
 
 .sort__left {
-  margin: 15px 20px;
+  margin: 11px 20px;
 }
 
 .sort__title {
@@ -3101,7 +3131,7 @@ footer {
 }
 
 .products__slideshow-block {
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .products__slideshow-display, .products__slideshow-link {
@@ -3258,7 +3288,7 @@ footer {
   top: 23px;
   bottom: 23px;
   right: 23px;
-  width: 123px;
+  width: 132px;
   text-align: right;
 }
 
@@ -3277,8 +3307,8 @@ footer {
 .products__buy-btn {
   display: block;
   vertical-align: top;
-  padding: 6px 16px;
-  font-family: OpenSans-Bold;
+  padding: 8px 19px;
+  font-family: "Open Sans", sans-serif;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3292,6 +3322,7 @@ footer {
   font-size: 12px;
   line-height: 14px;
   color: #7f7f7f;
+  margin-right: 14px;
 }
 .products__availability:before {
   content: "";
@@ -3328,10 +3359,13 @@ footer {
   margin-bottom: 15px;
 }
 .products__list-grids .products__item-inner {
+  padding: 18px 12px;
   background: #fbfbfb;
 }
 .products__list-grids .products__info {
   border: none;
+  padding-left: 0;
+  margin-bottom: -6px;
 }
 .products__list-grids .products__slideshow {
   width: auto;
@@ -3349,6 +3383,9 @@ footer {
 }
 .products__list-grids .products__desc {
   width: auto;
+}
+.products__list-grids .products__desc .products__desc-options {
+  margin-bottom: 4px;
 }
 .products__list-grids .products__right {
   position: static;
@@ -3382,7 +3419,7 @@ footer {
 }
 .products__list-grids .products__availability {
   float: left;
-  margin: 5px 15px;
+  margin: 5px 28px 5px 0;
 }
 .products__list-grids .products__desc-item {
   display: block;
@@ -3409,9 +3446,6 @@ footer {
   width: 50%;
   text-align: right;
 }
-.products__list-grids .products__item-inner {
-  padding: 15px 15px;
-}
 .products__list-grids .products__rating {
   margin-bottom: 12px;
 }
@@ -3430,19 +3464,22 @@ footer {
   margin-top: 10px;
 }
 .products__list-lines .products__item-inner {
-  padding: 8px 22px;
+  padding: 8px 22px 0 0;
   background: #fbfbfb;
 }
 .products__list-lines .products__slideshow-block {
   display: none;
 }
 .products__list-lines .products__desc {
+  margin-left: 0;
   width: auto;
 }
 .products__list-lines .products__desc-options {
   display: none;
 }
 .products__list-lines .products__desc-title {
+  padding-top: 11px;
+  margin-bottom: 0;
   width: 245px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -3453,6 +3490,7 @@ footer {
   display: none;
 }
 .products__list-lines .products__right {
+  padding-bottom: 1px;
   position: static;
   width: auto;
 }
@@ -3468,6 +3506,8 @@ footer {
   vertical-align: middle;
 }
 .products__list-lines .products__buy-btn {
+  margin-right: -8px;
+  margin-bottom: 10px;
   float: right;
 }
 .products__list-lines .products__availability {
@@ -3609,7 +3649,6 @@ footer {
   background-position: 0 -104px;
 }
 
-/*╨Я╨╡╤А╨╡╨╝╨╡╨╜╨╜╤Л╨╡*/
 /*╨д╤Г╨╜╨║╤Ж╨╕╨╛╨╜╨░╨╗╤М╨╜╤Л╨╡ ╤Б╤В╨╕╨╗╨╕*/
 .inlnblck {
   display: inline-block;

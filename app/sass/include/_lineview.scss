@@ -10,13 +10,14 @@
 		margin-top: 10px;
 	}
 	.products__item-inner{
-		padding: 8px 22px;
+		padding: 8px 22px 0 0;
 		background:#fbfbfb;
 	}
 	.products__slideshow-block{
 		display:none;
 	}
 	.products__desc {
+		margin-left:0;
 		width:auto;
 	}
 	.products__desc-options{
@@ -24,6 +25,8 @@
 
 	}
 	.products__desc-title {
+		padding-top: 11px;
+		margin-bottom: 0;
 		width:245px;
 		white-space:nowrap;
 		text-overflow:ellipsis;
@@ -36,6 +39,7 @@
 	}
 
 	.products__right{
+		padding-bottom: 1px;
 		position:static;
 		width:auto;
 	}
@@ -50,6 +54,8 @@
 		@include inlineblock(middle);
 	}
 	.products__buy-btn {
+		margin-right: -8px;
+    	margin-bottom: 10px;
 		float:right;
 	}
 	.products__availability{

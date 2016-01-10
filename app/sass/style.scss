@@ -60,6 +60,13 @@
 	}
 }
 
+/*Переменные*/
+$bgcolor1:#ffffff;
+$bgcolor2:#f4f4f4;
+$mainwidth:1100px;
+$clrOrang:#ff6602;
+$black:#333333;
+$body-font: 'Open Sans', sans-serif;
 
 
 @import "compass/reset";
@@ -94,14 +101,6 @@ $social-layout:horizontal;
 $aside-spacing: 5px;
 @import "aside/*.png";
 @include all-aside-sprites;
-
-/*Переменные*/
-$bgcolor1:#ffffff;
-$bgcolor2:#f4f4f4;
-$mainwidth:1100px;
-$clrOrang:#ff6602;
-$black:#333333;
-$body-font: 'Open Sans', sans-serif;
 
 
 /*Функциональные стили*/

@@ -11,7 +11,6 @@
     <link rel="icon" href="app/img/favicon.png" type="image/x-icon">
     <!--style-->
     <link rel="stylesheet" type="text/css" href="app/css/style.css">
-    <script src="app/bower/modernizer/modernizr.js"></script>
   </head>
   <body>
     <header>
@@ -34,7 +33,7 @@
           </div>
         </div>
         <div class="bottom-block">
-          <div class="bottom-block__wrap clearfix"><a href="#" alt="logo" class="logo inlnblck"><img src="app/img/cooltech.png" alt="Логотип" class="logo-img"></a>
+          <div class="bottom-block__wrap clearfix"><a href="#" class="logo inlnblck"><img src="app/img/cooltech.png" alt="Логотип" class="logo-img"></a>
             <div class="nav-site inlnblck right">
               <form class="search inlnblck">
                 <input type="search" placeholder="Что будем искать?" class="search__inpt">
@@ -72,20 +71,16 @@
           <ul class="asidebar-list">
             <li class="sidebar-item exist-goods">
               <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Наличие в магазинах</a></h3>
-              <div class="sidebar-item__content">
+              <div class="sidebar-item__content exist-content">
                 <ul class="exist__list">
                   <li class="exist__item">
                     <label for="all" class="exist__item__label"> 
-                      <input type="radio" name="exist" value="all" id="all" class="exist__item__input">
-                      <div class="exist__custom-btn"></div>
-                      <div class="exist__custom-lbl">Во всех магазинах									</div>
+                      <input type="radio" name="exist" value="all" id="all" class="exist__item__input"><span class="exist__custom-btn"></span><span class="exist__custom-lbl">Во всех магазинах									</span>
                     </label>
                   </li>
                   <li class="exist__item">
                     <label for="near" class="exist__item__label"> 
-                      <input type="radio" name="exist" value="near" id="near" class="exist__item__input">
-                      <div class="exist__custom-btn"></div>
-                      <div class="exist__custom-lbl">В ближайшем ко мне магазине</div>
+                      <input type="radio" name="exist" value="near" id="near" class="exist__item__input"><span class="exist__custom-btn"></span><span class="exist__custom-lbl">В ближайшем ко мне магазине</span>
                     </label>
                   </li>
                 </ul>
@@ -97,37 +92,27 @@
                 <ul class="choice-list">
                   <li class="choice__item">
                     <label for="choice0" class="choice-lbl"> 
-                      <input type="checkbox" value="Lenovo" id="choice0" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Lenovo</div>
+                      <input type="checkbox" value="Lenovo" id="choice0" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Lenovo</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choice1" class="choice-lbl"> 
-                      <input type="checkbox" value="Apple" id="choice1" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Apple</div>
+                      <input type="checkbox" value="Apple" id="choice1" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Apple</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choice2" class="choice-lbl"> 
-                      <input type="checkbox" value="Samsung" id="choice2" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Samsung</div>
+                      <input type="checkbox" value="Samsung" id="choice2" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Samsung</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choice3" class="choice-lbl"> 
-                      <input type="checkbox" value="Asus" id="choice3" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Asus</div>
+                      <input type="checkbox" value="Asus" id="choice3" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Asus</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choice4" class="choice-lbl"> 
-                      <input type="checkbox" value="Motorola" id="choice4" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Motorola</div>
+                      <input type="checkbox" value="Motorola" id="choice4" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Motorola</span>
                     </label>
                   </li>
                 </ul>
@@ -136,9 +121,9 @@
             </li>
             <li class="sidebar-item price">
               <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Цена</a></h3>
-              <div class="sidebar-item__content">
+              <div class="sidebar-item__content price-content">
                 <div class="pricefilter-wrap">
-                  <label for="pricefrom" class="price__lbl-from">От</label>
+                  <label for="pricefrom" class="price__lbl-from">от</label>
                   <input type="text" id="pricefrom" class="price__inpt-from">
                   <label for="priceto" class="price__lbl-to">до</label>
                   <input type="text" id="priceto" class="price__inpt-to">
@@ -148,7 +133,7 @@
             </li>
             <li class="sidebar-item">
               <h3 class="sidebar__item__title"> <a href="#" class="sidebar__title__link">Цвет</a></h3>
-              <div class="sidebar-item__content">
+              <div class="sidebar-item__content color-content">
                 <ul class="choice-color">
                   <li style="background-color:#ffffff" class="choice-color__item"><a href="#" class="color-link"></a></li>
                   <li style="background-color:#cccccc" class="choice-color__item"><a href="#" class="color-link"></a></li>
@@ -171,37 +156,27 @@
                 <ul class="choice-list">
                   <li class="choice__item">
                     <label for="choiceAndroid" class="choice-lbl"> 
-                      <input type="checkbox" value="Android" id="choiceAndroid" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Android</div>
+                      <input type="checkbox" value="Android" id="choiceAndroid" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Android</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choiceIOS" class="choice-lbl"> 
-                      <input type="checkbox" value="IOS" id="choiceIOS" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">IOS</div>
+                      <input type="checkbox" value="IOS" id="choiceIOS" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">IOS</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choiceWindowsMobile" class="choice-lbl"> 
-                      <input type="checkbox" value="WindowsMobile" id="choiceWindowsMobile" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">WindowsMobile</div>
+                      <input type="checkbox" value="WindowsMobile" id="choiceWindowsMobile" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">WindowsMobile</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choiceSymbian" class="choice-lbl"> 
-                      <input type="checkbox" value="Symbian" id="choiceSymbian" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Symbian</div>
+                      <input type="checkbox" value="Symbian" id="choiceSymbian" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Symbian</span>
                     </label>
                   </li>
                   <li class="choice__item">
                     <label for="choiceCustom" class="choice-lbl"> 
-                      <input type="checkbox" value="Custom" id="choiceCustom" class="choice-chkbx">
-                      <div class="choice__custom-chkbx aside-choice-box"></div>
-                      <div class="choice__custom-lbl">Custom</div>
+                      <input type="checkbox" value="Custom" id="choiceCustom" class="choice-chkbx"><span class="choice__custom-chkbx aside-choice-box"></span><span class="choice__custom-lbl">Custom</span>
                     </label>
                   </li>
                 </ul>
@@ -899,7 +874,7 @@
     </div>
     <footer>
       <div class="footer-top">
-        <div class="container clearfix">
+        <div class="footer-top__container clearfix">
           <div class="footer__left left"><a class="footer_logo"><img src="app/img/logo-footer.png" alt="Логотип" class="footer_logo_img">
               <div class="footer_logo-text">cooltech</div></a></div>
           <div class="footer__right right">
