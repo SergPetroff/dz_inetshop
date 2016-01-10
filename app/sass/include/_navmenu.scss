@@ -13,7 +13,7 @@
 }
 .nav-list__item{
 	display:inline-block;
-	height:52px;
+	/* height:52px; */
 	background:#ffffff;
 }
 
@@ -42,10 +42,10 @@
 }
 
 .nav-list__item__link{
-
+	padding: 15px 10px;
 	display:block;
 	color:black;
-	@include vertical-align();
-	padding:0 10px;
+	/* @include vertical-align();
+	padding:0 10px; */
 }
 

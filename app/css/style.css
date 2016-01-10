@@ -2553,7 +2553,7 @@ body .ui-tooltip {
 
 .nav-list__item {
   display: inline-block;
-  height: 52px;
+  /* height:52px; */
   background: #ffffff;
 }
 
@@ -2581,14 +2581,11 @@ body .ui-tooltip {
 }
 
 .nav-list__item__link {
+  padding: 15px 10px;
   display: block;
   color: black;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding: 0 10px;
+  /* @include vertical-align();
+  padding:0 10px; */
 }
 
 /*╤Е╨╗╨╡╨▒╨╜╤Л╨╡ ╨║╤А╨╛╤И╨║╨╕*/
