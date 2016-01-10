@@ -14,8 +14,9 @@
     margin: 11px 20px;
 }
 .sort__title{
+	font-size: 15px;
 	display:inline-block;
-	    vertical-align: middle;
+    vertical-align: middle;
 }
 .sort__select{
 	display:inline-block;
@@ -28,6 +29,11 @@
 }
 .sort__view-item{
 	display:inline-block;
+	&.active {
+		.sort__view-icon{	
+			@include get-sprite($views-map, rows-hover)
+		}
+	}
 }
 
 .sort__view{
@@ -45,20 +51,25 @@
 }
 /*icons view*/
 
-$views-map: sprite-map('view/*.png', $spacing:50px);
+
 $items: rows, grids, lines;
 
 @each $item in $items{
+	$hover-icon: $item + '-hover';
 	.sort__view-#{$item}{
 		.sort__view-icon{
 			@include get-sprite($views-map, $item)
 		}
 		&:hover{
-			$hover-icon: $item + '-hover';
 			.sort__view-icon{
 				@include get-sprite($views-map, $hover-icon)
 			}
 		}
+		&.active {
+			.sort__view-icon{	
+				@include get-sprite($views-map,  $hover-icon)
+			}
+	}
 	}
 }
 

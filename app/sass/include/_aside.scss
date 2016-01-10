@@ -15,6 +15,7 @@
 }
 
 .typegoods__link{
+	font-size:13px;
 	padding: 13px 30px;
     color: #7f7f7f;
     display: block;
@@ -43,14 +44,12 @@
 			&:after{
 			    display: block;
 			    content: "";
-			    background-image: url('../img/aside/btn-accardeon.png');
-			  	background-repeat: no-repeat;
-			    background-position: 0 0;
+			    @include get-sprite($aside-map, btn-accardeon);
 			    width: 20px;
 			    height: 15px;
 			   	position: relative;
-			    top: -16px;
-			    left: 271px;
+			    top: -8px;
+			    left: 276px;
 			}
 		}
 
@@ -68,9 +67,7 @@
 		&:after{
 	    display: block;
 	    content: "";
-	    background-image: url('../img/aside/btn-accardeon-closed.png');
-	  	background-repeat: no-repeat;
-	    background-position: 0 0;
+	     @include get-sprite($aside-map, btn-accardeon-closed);
 	    width: 20px;
 	    height: 15px;
 	   	position: relative;
@@ -180,8 +177,8 @@
 }
 .exist__custom-btn:after{
 	content: '';
-    height: 9px;
-    width: 9px;
+    height: 10px;
+    width: 10px;
     border-radius: 5px;
     background-color: #f60;
     position: absolute;
@@ -194,14 +191,23 @@
     -webkit-transition: opacity 0.2s ease;
     transition: opacity 0.2s ease;
 }
+
+.aside-choice-box{
+	@include get-sprite($aside-map, choice-box);
+	&:hover{
+		@include get-sprite($aside-map, choice-box-hover);
+	}
+}
 .choice-chkbx:checked + .aside-choice-box {
   /*  background-position: 0 -16px; */
-  	background: url(../img/aside/choice-box-checked.png) no-repeat;
+  	/* background: url(../img/aside/choice-box-checked.png) no-repeat; */
+  	@include get-sprite($aside-map, choice-box-checked);
   }
 .choice__custom-chkbx{
+
 	display:inline-block;
-	width:20px;
-	height:20px;
+/* 	width:20px;
+	height:20px; */
 	position: relative;
 	top:5px;	
 }
@@ -256,14 +262,17 @@ $sizecolorcub:37px;
 	margin-right: 15px;
     margin-top: 17px;
 				&:hover{
-						//border: solid 2px #ff6600;
-						background-color: #ff6e35;
-					}
+				//border: solid 2px #ff6600;
+				background-color: #ff6e35;
+				}
 	.color-link{
-			border: solid 1px #dee1e4;
-			display:block;
-			height:$sizecolorcub;
-			width:$sizecolorcub;
+		border: solid 1px #dee1e4;
+		display:block;
+		height:$sizecolorcub;
+		width:$sizecolorcub;
 
 		}
+	&.active{
+		box-shadow: 0 0 2px 2px #f60;
+	}
 }

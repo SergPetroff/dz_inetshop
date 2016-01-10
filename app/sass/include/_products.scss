@@ -108,13 +108,14 @@
 	font-size:16px;
 	font-weight:600;
 	line-height: 18px;
-	//@include open-sans(semibold);
+	font-family: 'Open Sans Regular';
 	color:#010101;
 	margin-bottom: 20px;
 	padding-top:7px;
 }
 
 .products__desc-options{
+	font-family: 'Open Sans Regular';
 	margin-bottom:20px;
 }
 .products__desc-item{
@@ -213,6 +214,8 @@ $stars-map: sprite-map('stars/*.png', $spacing:50px);
 }
 
 .products__price{
+	font-family: 'Open Sans Regular';
+	font-weight: 600;
     color: #303030;
     font-size: 20px;
     line-height: 22px;

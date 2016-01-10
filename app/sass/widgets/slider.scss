@@ -1,6 +1,6 @@
 .ui-slider{
     height: 3px;
-    background-color: #dee1e4;
+    background: #dee1e4;
     position: relative;
     margin-bottom: 18px;
     width: 280px;
@@ -13,7 +13,7 @@
     position: absolute;
 	}
 	.ui-slider-handle {
-		background:url(../img/aside/slider-control.png) no-repeat;
+        @include get-sprite($aside-map, slider-control);
 		height: 14px;
     	width: 8px;
     	border:0 none;

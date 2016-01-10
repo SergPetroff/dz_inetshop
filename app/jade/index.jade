@@ -48,9 +48,14 @@ html
 								ul.sort__view-list
 									-var views = ["rows","grids","lines"]
 									each item in views
-										li(class="sort__view-item sort__view-" + item data-view= item)
-											a(href="#").sort__view-link
-												.sort__view-icon
+										if item == "rows"
+											li(class="sort__view-item active sort__view-" + item data-view= item)
+												a(href="#").sort__view-link
+													.sort__view-icon
+										else
+											li(class="sort__view-item sort__view-" + item data-view= item)
+												a(href="#").sort__view-link
+													.sort__view-icon
 					.products
 						include _products
 						.pagination

@@ -66,7 +66,11 @@ $bgcolor2:#f4f4f4;
 $mainwidth:1100px;
 $clrOrang:#ff6602;
 $black:#333333;
-$body-font: 'Open Sans', sans-serif;
+/* $body-font: 'Open Sans', sans-serif; */
+$body-font: 'Open Sans Regular';
+$aside-map: sprite-map('aside/*.png', $spacing:50px);
+$views-map: sprite-map('view/*.png', $spacing:50px);
+$icons-map: sprite-map('icons/*.png', $spacing:50px);
 
 
 @import "compass/reset";
@@ -98,9 +102,9 @@ $social-layout:horizontal;
 @include all-social-sprites;
 
 
-$aside-spacing: 5px;
+/* $aside-spacing: 5px;
 @import "aside/*.png";
-@include all-aside-sprites;
+@include all-aside-sprites; */
 
 
 /*Функциональные стили*/
@@ -170,8 +174,10 @@ body{
 
 
 .contacts__adres:before{
+	content:"";
   display: inline-block;
-  content: url('../img/mappin.png');
+  /* content: url('../img/mappin.png'); */
+  @include get-sprite($icons-map, mappin);
   width: 15px;
   height: 15px;
   margin-right:5px;
@@ -180,8 +186,9 @@ body{
 	margin-left:80px;
 }
 .contacts__phone:before{
+	content:"";
   display: inline-block;
-  content: url('../img/telephone.png');
+  @include get-sprite($icons-map, telephone);
   width: 15px;
   height: 15px;
   margin-right:5px;
@@ -239,9 +246,9 @@ body{
 	padding-top: 8px;
 	display:inline-block;
 	vertical-align:middle;
-	font-size: 18px;
+	font-size: 16px;
 	color:#333333;
-	margin-left:33px;
+	margin-left:38px;
 	text-decoration: underline;
 }
 
