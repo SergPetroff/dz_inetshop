@@ -2968,7 +2968,7 @@ footer {
   font-family: opensans-regular-webfont;
 }
 
-/*╤Б╨╛╤Ж ╨║╨╜╨╛╨┐╤Г╨╕*/
+/*╤Б╨╛╤Ж ╨║╨╜╨╛╨┐╨║╨╕*/
 .header__social-link {
   display: block;
   width: 17px;
@@ -2980,7 +2980,7 @@ footer {
   margin-left: 12px;
   width: 26px;
   height: 26px;
-  border-radius: 22px;
+  border-radius: 26px;
   background-color: #000;
   display: inline-block;
 }
@@ -3620,50 +3620,50 @@ footer {
 }
 
 .social-sprite, .social-fb-header, .social-fb, .social-tw-header, .social-tw, .social-vk-header, .social-vk {
-  background-image: url('../img/social-s535e5ffdcc.png');
+  background-image: url('../img/social-sc5dbcbad43.png');
   background-repeat: no-repeat;
 }
 
 .social-fb-header {
-  background-position: -21px 0;
+  background-position: -56px 0;
 }
 .social-fb-header:hover, .social-fb-header.fb-header-hover {
   background-position: 0 0;
 }
 
 .social-fb {
-  background-position: -68px 0;
+  background-position: -173px 0;
 }
 .social-fb:hover, .social-fb.fb-hover {
-  background-position: -42px 0;
+  background-position: -112px 0;
 }
 
 .social-tw-header {
-  background-position: -125px 0;
+  background-position: -300px 0;
 }
 .social-tw-header:hover, .social-tw-header.tw-header-hover {
-  background-position: -94px 0;
+  background-position: -234px 0;
 }
 
 .social-tw {
-  background-position: -196px 0;
+  background-position: -441px 0;
 }
 .social-tw:hover, .social-tw.tw-hover {
-  background-position: -156px 0;
+  background-position: -366px 0;
 }
 
 .social-vk-header {
-  background-position: -261px 0;
+  background-position: -576px 0;
 }
 .social-vk-header:hover, .social-vk-header.vk-header-hover {
-  background-position: -236px 0;
+  background-position: -516px 0;
 }
 
 .social-vk {
-  background-position: -317px 0;
+  background-position: -702px 0;
 }
 .social-vk:hover, .social-vk.vk-hover {
-  background-position: -286px 0;
+  background-position: -636px 0;
 }
 
 /* $aside-spacing: 5px;
@@ -3711,7 +3711,7 @@ body {
 
 .top-block {
   background: #ffffff;
-  height: 77px;
+  /*height:77px;*/
 }
 
 .bottom-block {
@@ -3722,11 +3722,8 @@ body {
 .top-block__wrap {
   width: 1100px;
   margin: 0 auto;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  padding: 21px 0;
+  /*@include vertical-align();*/
 }
 
 .bottom-block__wrap {
@@ -3762,8 +3759,10 @@ body {
   height: 16px;
   width: 12px;
   width: 15px;
-  height: 15px;
-  margin-right: 5px;
+  height: 17px;
+  position: relative;
+  top: 3px;
+  right: 7px;
 }
 
 .top-block_phone_num {
@@ -3823,6 +3822,8 @@ body {
   font-size: 16px;
   color: #333333;
   margin-left: 38px;
+}
+.nav-site a:hover {
   text-decoration: underline;
 }
 

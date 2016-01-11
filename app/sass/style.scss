@@ -96,7 +96,7 @@ $icons-map: sprite-map('icons/*.png', $spacing:50px);
 @import "include/_products.scss";
 @import "include/_pagination.scss";
 
-$social-spacing: 15px;
+$social-spacing: 50px;
 $social-layout:horizontal;
 @import "social/*.png";
 @include all-social-sprites;
@@ -151,7 +151,7 @@ body{
 
 .top-block{
 	background:$bgcolor1;
-	height:77px;
+	/*height:77px;*/
 }
 
 .bottom-block{
@@ -161,7 +161,8 @@ body{
 .top-block__wrap{
 	width:$mainwidth;
 	margin: 0 auto;
-	@include vertical-align();
+	padding:21px 0;
+	/*@include vertical-align();*/
 }
 
 
@@ -190,8 +191,10 @@ body{
   display: inline-block;
   @include get-sprite($icons-map, telephone);
   width: 15px;
-  height: 15px;
-  margin-right:5px;
+  height: 17px;
+	position: relative;
+   top: 3px;
+   right: 7px;
 }
 
 .top-block_phone_num{
@@ -249,7 +252,10 @@ body{
 	font-size: 16px;
 	color:#333333;
 	margin-left:38px;
-	text-decoration: underline;
+	&:hover{
+		text-decoration: underline;
+	}
+	
 }
 
 .header_navi{
